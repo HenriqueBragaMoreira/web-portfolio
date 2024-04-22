@@ -1,6 +1,7 @@
 "use client";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { Logo } from "./icon/logo";
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -14,6 +15,16 @@ export function Navbar() {
 
   return (
     <div className="py-10 flex items-center h-12 gap-4 justify-around">
+      <div className="flex text-foreground items-center">
+        <Logo />
+        <span className="font-bold text-xl">Henrique.</span>
+      </div>
+      <div className="flex gap-14">
+        <a className="hover:font-semibold hover:underline">Habilidades</a>
+        <a className="hover:font-semibold hover:underline">Projetos</a>
+        <a className="hover:font-semibold hover:underline">Contatos</a>
+        <a className="hover:font-semibold hover:underline">Mais +</a>
+      </div>
       <div className="flex items-center gap-8">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
