@@ -9,6 +9,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from "./ui/dropdown-menu";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle
+} from "./ui/navigation-menu";
+import Link from "next/link";
 
 export function Navbar() {
   const { setTheme } = useTheme();
@@ -19,12 +27,38 @@ export function Navbar() {
         <Logo />
         <span className="font-bold text-xl">Henrique.</span>
       </div>
-      <div className="flex gap-14">
-        <a className="hover:font-semibold hover:underline">Habilidades</a>
-        <a className="hover:font-semibold hover:underline">Projetos</a>
-        <a className="hover:font-semibold hover:underline">Contatos</a>
-        <a className="hover:font-semibold hover:underline">Mais +</a>
-      </div>
+      <NavigationMenu>
+        <NavigationMenuList className="gap-14">
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Habilidades
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Projetos
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Contatos
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Mais +
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
       <div className="flex items-center gap-8">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -40,7 +74,9 @@ export function Navbar() {
             <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-        <Button variant="ghost">Resume</Button>
+        <Button className="p-5 border-foreground" variant="outline">
+          Resume
+        </Button>
       </div>
     </div>
   );
