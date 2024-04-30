@@ -11,6 +11,7 @@ import {
 } from "./ui/navigation-menu";
 import { ToggleTheme } from "./toggleTheme";
 import { DictionaryType } from "@/models/translate";
+import { ToggleLanguage } from "./toggleLanguage";
 
 type NavbarProps = {
   dictionary: DictionaryType;
@@ -56,7 +57,10 @@ export function Navbar({ dictionary }: NavbarProps) {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="flex items-center gap-8">
-        <ToggleTheme dictionary={dictionary} />
+        <div className="flex gap-2">
+          <ToggleLanguage dictionary={dictionary} />
+          <ToggleTheme dictionary={dictionary} />
+        </div>
         <Button className="p-5 border-foreground" variant="outline">
           {dictionary.navbar["resume-download-button"]}
         </Button>

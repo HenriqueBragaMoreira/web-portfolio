@@ -4,6 +4,18 @@
     "projects": "Proyectos",
     "contact": "Contactos",
     "more": "Más +",
+    "dropdown-languages": {
+      "alt-images": {
+        "brazil": "Bandera de Brasil",
+        "eua": "Bandera de Estados Unidos",
+        "spanish": "Bandera de España"
+      },
+      "languages": {
+        "pt": "Portugués",
+        "en": "Inglés",
+        "es": "Español"
+      }
+    },
     "theme": {
       "light": "Claro",
       "dark": "Oscuro"
