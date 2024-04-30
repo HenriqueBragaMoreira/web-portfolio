@@ -10,5 +10,14 @@
     },
     "resume-download-button": "Currículo"
   },
-  "first-content": {}
+  "first-content": {
+    "presentation-message": "PRAZER MEU NOME É",
+    "introduction-text": "Desenvolvedor front-end criativo com mais de 3 anos de experiência. Proficiente em JavaScript, Typescript e React. Apaixonado por UI/UX.",
+    "link-names": {
+      "github": "Link do Github",
+      "linkedin": "Link do Linkedin",
+      "instagram": "Link do Instagram",
+      "twitter": "Link do Twitter"
+    }
+  }
 }

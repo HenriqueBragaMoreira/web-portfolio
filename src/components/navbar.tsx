@@ -10,8 +10,13 @@ import {
   navigationMenuTriggerStyle
 } from "./ui/navigation-menu";
 import { ToggleTheme } from "./toggleTheme";
+import { DictionaryType } from "@/models/translate";
 
-export function Navbar() {
+type NavbarProps = {
+  dictionary: DictionaryType;
+};
+
+export function Navbar({ dictionary }: NavbarProps) {
   return (
     <div className="py-10 flex items-center h-12 gap-4 justify-around">
       <div className="flex text-foreground items-center">
@@ -23,37 +28,37 @@ export function Navbar() {
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Habilidades
+                {dictionary.navbar.skills}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Projetos
+                {dictionary.navbar.projects}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Contatos
+                {dictionary.navbar.contact}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Mais +
+                {dictionary.navbar.more}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
       <div className="flex items-center gap-8">
-        <ToggleTheme />
+        <ToggleTheme dictionary={dictionary} />
         <Button className="p-5 border-foreground" variant="outline">
-          Resume
+          {dictionary.navbar["resume-download-button"]}
         </Button>
       </div>
     </div>

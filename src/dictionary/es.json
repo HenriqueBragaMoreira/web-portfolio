@@ -10,5 +10,14 @@
     },
     "resume-download-button": "Currículum"
   },
-  "first-content": {}
+  "first-content": {
+    "presentation-message": "ENCANTADO DE CONOCERTE, MI NOMBRE ES",
+    "introduction-text": "Desarrollador front-end creativo con más de 3 años de experiencia. Competente en JavaScript, Typescript y React. Apasionado por UI/UX.",
+    "link-names": {
+      "github": "Enlace de Github",
+      "linkedin": "Enlace de LinkedIn",
+      "instagram": "Enlace de Instagram",
+      "twitter": "Enlace de Twitter"
+    }
+  }
 }

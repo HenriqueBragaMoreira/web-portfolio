@@ -7,8 +7,9 @@ import {
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "./ui/button";
+import { DictionaryType } from "@/models/translate";
 
-export function ToggleTheme() {
+export function ToggleTheme({ dictionary }: { dictionary: DictionaryType }) {
   const { setTheme } = useTheme();
 
   return (
@@ -21,8 +22,12 @@ export function ToggleTheme() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>Claro</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>Escuro</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("light")}>
+          {dictionary.navbar.theme.light}
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
+          {dictionary.navbar.theme.dark}
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
