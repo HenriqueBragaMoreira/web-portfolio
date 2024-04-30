@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contacts",
+    "more": "More +",
+    "theme": {
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "resume-download-button": "Resume"
+  },
+  "first-content": {}
+}

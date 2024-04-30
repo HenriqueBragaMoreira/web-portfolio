@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contatos",
+    "more": "Mais +",
+    "theme": {
+      "light": "Claro",
+      "dark": "Escuro"
+    },
+    "resume-download-button": "Currículo"
+  },
+  "first-content": {}
+}
