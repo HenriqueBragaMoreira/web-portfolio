@@ -1,6 +1,7 @@
 "use client";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { Logo } from "./icon/logo";
 import { Button } from "./ui/button";
 import {
@@ -16,7 +17,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle
 } from "./ui/navigation-menu";
-import Link from "next/link";
 
 export function Navbar() {
   const { setTheme } = useTheme();
@@ -69,9 +69,8 @@ export function Navbar() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("light")}>Claro</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("dark")}>Escuro</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
         <Button className="p-5 border-foreground" variant="outline">
