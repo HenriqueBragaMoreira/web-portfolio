@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar";
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export default function Home() {
   return (
@@ -24,7 +25,36 @@ export default function Home() {
                 Desenvolvedor front-end criativo com mais de 3 anos de experiência. Proficiente em
                 JavaScript, Typescript e React. Apaixonado por UI/UX.
               </span>
+              <div className="flex gap-8">
+                <a
+                  href="https://github.com/HenriqueBragaMoreira"
+                  title="Link do github"
+                  target="_blank"
+                >
+                  <Github />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/h-braga/"
+                  title="Link do linkedin"
+                  target="_blank"
+                >
+                  <Linkedin />
+                </a>
+                <a
+                  href="https://www.instagram.com/hen1_braga/"
+                  title="Link do instagram"
+                  target="_blank"
+                >
+                  <Instagram />
+                </a>
+                <a href="https://twitter.com/braginha_hen1" title="Link do twitter" target="_blank">
+                  <Twitter />
+                </a>
+              </div>
             </div>
+          </div>
+          <div>
+            <div className="bg-[#7E74F1] h-96 w-[340px] rounded-2xl transform -rotate-[9.55deg]" />
           </div>
         </div>
       </div>
