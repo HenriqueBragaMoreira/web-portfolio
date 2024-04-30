@@ -19,7 +19,7 @@ type NavbarProps = {
 
 export function Navbar({ dictionary }: NavbarProps) {
   return (
-    <div className="py-10 flex items-center h-12 gap-4 justify-around">
+    <div className="bg-background border-b border-[#656D72]/20 py-10 flex items-center h-12 gap-4 justify-around">
       <div className="flex text-foreground items-center">
         <Logo />
         <span className="font-bold text-xl">Henrique.</span>
