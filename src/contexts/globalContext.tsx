@@ -13,7 +13,7 @@ const initialValue: GlobalContextType = {
 };
 
 const GlobalContext = createContext<GlobalContextType>(initialValue);
-export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
+export const GlobalProvider = ({ children }: WithChildren) => {
   const [dictionary, setDictionary] = useState<DictionaryType | any>();
 
   return (
@@ -21,8 +21,7 @@ export const GlobalProvider = ({ children }: { children: React.ReactNode }) => {
       value={{
         dictionary,
         setDictionary
-      }}
-    >
+      }}>
       {children}
     </GlobalContext.Provider>
   );

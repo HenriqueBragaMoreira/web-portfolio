@@ -4,7 +4,7 @@ import { useCallback } from "react";
 
 import { useEventListener } from "usehooks-ts";
 
-export function Background({ children }: { children: React.ReactNode }) {
+export function Background({ children }: WithChildren) {
   const mouseMoveEvent = useCallback((e: MouseEvent) => {
     const scale = window.visualViewport?.scale;
     if (scale === 1) {
