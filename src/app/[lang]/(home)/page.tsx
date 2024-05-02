@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/navbar";
+import { NavbarContainer } from "@/components/navbar/navbarContainer";
 import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/lib/getDictionary";
 import { NavbarAnimation } from "./components/animation";
@@ -10,7 +10,7 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
   return (
     <div className="h-screen flex flex-col">
       <NavbarAnimation>
-        <Navbar dictionary={dictionary} />
+        <NavbarContainer dictionary={dictionary} />
       </NavbarAnimation>
       <FirstContent dictionary={dictionary} />
     </div>

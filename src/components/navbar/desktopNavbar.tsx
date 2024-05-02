@@ -1,29 +1,23 @@
-"use client";
-import Link from "next/link";
-import { Logo } from "./icon/logo";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle
-} from "./ui/navigation-menu";
-import { ToggleTheme } from "./toggleTheme";
+} from "../ui/navigation-menu";
+import { ToggleTheme } from "../toggleTheme";
+import { ToggleLanguage } from "../toggleLanguage";
+import Link from "next/link";
 import { DictionaryType } from "@/models/translate";
-import { ToggleLanguage } from "./toggleLanguage";
 
-type NavbarProps = {
+type DesktopNavbarProps = {
   dictionary: DictionaryType;
 };
 
-export function Navbar({ dictionary }: NavbarProps) {
+export function DesktopNavbar({ dictionary }: DesktopNavbarProps) {
   return (
-    <div className="bg-background border-b border-[#656D72]/20 py-10 flex items-center h-12 gap-4 justify-around">
-      <div className="flex text-foreground items-center">
-        <Logo />
-        <span className="font-bold text-xl">Henrique.</span>
-      </div>
+    <>
       <NavigationMenu>
         <NavigationMenuList className="gap-14">
           <NavigationMenuItem>
@@ -65,6 +59,6 @@ export function Navbar({ dictionary }: NavbarProps) {
           {dictionary.navbar["resume-download-button"]}
         </Button>
       </div>
-    </div>
+    </>
   );
 }
