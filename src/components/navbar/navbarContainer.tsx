@@ -11,8 +11,8 @@ type NavbarContainerProps = {
 
 export function NavbarContainer({ dictionary }: NavbarContainerProps) {
   return (
-    <div className="bg-background border-b border-[#656D72]/20 py-10 flex items-center h-12 gap-4 justify-around">
-      <div className="flex text-foreground items-center">
+    <div className="bg-background border-b border-[#656D72]/20 flex items-center h-[70px] gap-4 justify-around">
+      <div className="flex items-center">
         <Logo />
         <span className="font-bold text-xl">Henrique.</span>
       </div>

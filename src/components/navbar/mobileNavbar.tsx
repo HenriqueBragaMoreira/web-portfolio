@@ -18,7 +18,7 @@ export function MobileNavbar({ dictionary }: MobileNavbarProps) {
         </Button>
       </SheetTrigger>
       <SheetContent className="w-72">
-        <SheetHeader className="flex flex-row justify-between my-5 gap-2 space-y-0 items-center border-b border-[#656D72]/20">
+        <SheetHeader className="flex-row justify-between my-5 gap-2 space-y-0 items-center border-b border-[#656D72]/20">
           <span className="text-xl font-bold">H</span>
           <div>
             <ToggleLanguage dictionary={dictionary} />
