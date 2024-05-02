@@ -18,7 +18,7 @@ type DesktopNavbarProps = {
 export function DesktopNavbar({ dictionary }: DesktopNavbarProps) {
   return (
     <>
-      <NavigationMenu>
+      <NavigationMenu className="lg:flex hidden">
         <NavigationMenuList className="gap-14">
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
@@ -50,7 +50,7 @@ export function DesktopNavbar({ dictionary }: DesktopNavbarProps) {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="flex items-center gap-8">
+      <div className="lg:flex hidden items-center gap-8">
         <div className="flex gap-2">
           <ToggleLanguage dictionary={dictionary} />
           <ToggleTheme dictionary={dictionary} />
