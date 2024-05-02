@@ -4,7 +4,7 @@ import { MainContainerAnimation, ImageContainerAnimation } from "./animation";
 
 export function FirstContent({ dictionary }: { dictionary: DictionaryType }) {
   return (
-    <div className="flex flex-1 justify-start items-center px-48">
+    <div className="flex flex-1 items-center px-48">
       <div className="flex w-full items-center justify-between">
         <div className="flex flex-col gap-4 max-w-[600px]">
           <MainContainerAnimation>

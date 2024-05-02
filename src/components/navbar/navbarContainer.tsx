@@ -17,7 +17,7 @@ export function NavbarContainer({ dictionary }: NavbarContainerProps) {
         <span className="font-bold text-xl">Henrique.</span>
       </div>
       <DesktopNavbar dictionary={dictionary} />
-      <MobileNavbar />
+      <MobileNavbar dictionary={dictionary} />
     </div>
   );
 }
