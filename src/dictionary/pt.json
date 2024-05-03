@@ -31,5 +31,75 @@
       "instagram": "Link do Instagram",
       "twitter": "Link do Twitter"
     }
+  },
+  "second-content": {
+    "title-type-writer": [
+      {
+        "text": "Meu"
+      },
+      {
+        "text": "Conjunto"
+      },
+      {
+        "text": "de"
+      },
+      {
+        "text": "Tecnologias."
+      }
+    ],
+    "subtitle-type-writer": [
+      {
+        "text": "Essas",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "são",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "as",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "principais",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "tecnologias",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "e",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "ferramentas",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "que",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "eu",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "uso",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "nos",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "meus",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "trabalhos.",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      }
+    ]
   }
 }

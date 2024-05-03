@@ -31,5 +31,75 @@
       "instagram": "Enlace de Instagram",
       "twitter": "Enlace de Twitter"
     }
+  },
+  "second-content": {
+    "title-type-writer": [
+      {
+        "text": "Mi",
+        "className": ""
+      },
+      {
+        "text": "Conjunto",
+        "className": ""
+      },
+      {
+        "text": "de",
+        "className": ""
+      },
+      {
+        "text": "Tecnología.",
+        "className": ""
+      }
+    ],
+    "subtitle-type-writer": [
+      {
+        "text": "Estas",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "son",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "las",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "principales",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "tecnologías",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "y",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "herramientas",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "que",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "utilizo",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "en",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "mi",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "trabajo.",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      }
+    ]
   }
 }

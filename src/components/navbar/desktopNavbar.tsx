@@ -21,7 +21,7 @@ export function DesktopNavbar({ dictionary }: DesktopNavbarProps) {
       <NavigationMenu className="lg:flex hidden">
         <NavigationMenuList className="gap-14">
           <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
+            <Link href="#second-content" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 {dictionary.navbar.skills}
               </NavigationMenuLink>

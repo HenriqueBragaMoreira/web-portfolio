@@ -31,5 +31,75 @@
       "instagram": "Instagram Link",
       "twitter": "Twitter Link"
     }
+  },
+  "second-content": {
+    "title-type-writer": [
+      {
+        "text": "My",
+        "className": ""
+      },
+      {
+        "text": "Technology",
+        "className": ""
+      },
+      {
+        "text": "Stack.",
+        "className": ""
+      }
+    ],
+    "subtitle-type-writer": [
+      {
+        "text": "These",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "are",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "the",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "main",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "technologies",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "and",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "tools",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "that",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "I",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "use",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "in",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "my",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      },
+      {
+        "text": "work.",
+        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
+      }
+    ]
   }
 }
