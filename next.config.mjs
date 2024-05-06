@@ -4,6 +4,15 @@ const nextConfig = {
   swcMinify: true,
   eslint: {
     ignoreDuringBuilds: true
+  },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/pt",
+        permanent: true
+      }
+    ];
   }
 };
 
