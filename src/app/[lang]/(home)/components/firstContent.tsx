@@ -4,7 +4,7 @@ import { MainContainerAnimation, ImageContainerAnimation } from "./animation";
 
 export function FirstContent({ dictionary }: { dictionary: DictionaryType }) {
   return (
-    <div className="lg:flex lg:flex-row flex flex-col gap-20 flex-1 w-full lg:items-center justify-between lg:px-48 px-10">
+    <div className="flex flex-col lg:flex-row lg:gap-20 flex-1 w-full items-center lg:justify-between justify-around lg:px-48 px-10">
       <MainContainerAnimation>
         <div className="flex items-center gap-4">
           <div className="h-[1px] w-4 border border-[#D9D9D9]" />
@@ -58,7 +58,8 @@ export function FirstContent({ dictionary }: { dictionary: DictionaryType }) {
         </div>
       </MainContainerAnimation>
       <ImageContainerAnimation>
-        <div className="bg-[#7E74F1] h-96 w-[340px] rounded-2xl transform -rotate-[9.55deg]" />
+        <div className="bg-[#EAE6FE] lg:h-96 lg:w-[340px] h-72 w-[244px] absolute rounded-2xl z-50" />
+        <div className="bg-[#7E74F1] lg:h-96 lg:w-[340px] h-72 w-[244px] rounded-2xl transform -rotate-[19.1deg]" />
       </ImageContainerAnimation>
     </div>
   );
