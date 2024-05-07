@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "skills": "Skills",
+    "skills": "About me",
     "projects": "Projects",
     "contact": "Contacts",
     "more": "More +",
@@ -35,49 +35,36 @@
   "second-content": {
     "title-type-writer": [
       {
-        "text": "My",
-        "className": ""
+        "text": "One"
       },
       {
-        "text": "Technology",
-        "className": ""
+        "text": "little"
       },
       {
-        "text": "Stack.",
-        "className": ""
+        "text": "more"
+      },
+      {
+        "text": "about"
+      },
+      {
+        "text": "me."
       }
     ],
     "subtitle-type-writer": [
       {
-        "text": "These",
+        "text": "Knowing",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "are",
+        "text": "more",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "the",
+        "text": "about",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "main",
-        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
-      },
-      {
-        "text": "technologies",
-        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
-      },
-      {
-        "text": "and",
-        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
-      },
-      {
-        "text": "tools",
-        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
-      },
-      {
-        "text": "that",
+        "text": "who",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
@@ -85,11 +72,11 @@
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "use",
+        "text": "am",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "in",
+        "text": "and",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
@@ -97,7 +84,7 @@
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "work.",
+        "text": "skills.",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       }
     ]

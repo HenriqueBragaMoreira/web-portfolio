@@ -19,6 +19,7 @@ export function ImageContainerAnimation({ children }: WithChildren) {
     <motion.div
       initial={{ x: "64px", translateX: "3px", opacity: "0%", rotate: 9.55 }}
       animate={{ x: "0px", opacity: "100%", rotate: 0 }}
+      whileHover={{ scale: 1.05 }}
     >
       {children}
     </motion.div>

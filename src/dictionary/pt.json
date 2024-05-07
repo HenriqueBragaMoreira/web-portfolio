@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "skills": "Habilidades",
+    "skills": "Sobre mim",
     "projects": "Projetos",
     "contact": "Contatos",
     "more": "Mais +",
@@ -35,49 +35,36 @@
   "second-content": {
     "title-type-writer": [
       {
-        "text": "Meu"
+        "text": "Um"
       },
       {
-        "text": "Conjunto"
+        "text": "pouco"
       },
       {
-        "text": "de"
+        "text": "mais"
       },
       {
-        "text": "Tecnologias."
+        "text": "sobre"
+      },
+      {
+        "text": "mim."
       }
     ],
     "subtitle-type-writer": [
       {
-        "text": "Essas",
+        "text": "Conhecendo",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "são",
+        "text": "mais",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "as",
+        "text": "sobre",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "principais",
-        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
-      },
-      {
-        "text": "tecnologias",
-        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
-      },
-      {
-        "text": "e",
-        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
-      },
-      {
-        "text": "ferramentas",
-        "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
-      },
-      {
-        "text": "que",
+        "text": "quem",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
@@ -85,19 +72,19 @@
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "uso",
+        "text": "sou",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "nos",
+        "text": "e",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "meus",
+        "text": "minhas",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       },
       {
-        "text": "trabalhos.",
+        "text": "habilidades.",
         "className": "text-sm text-[#7E74F1] dark:text-[#7E74F1]"
       }
     ]
