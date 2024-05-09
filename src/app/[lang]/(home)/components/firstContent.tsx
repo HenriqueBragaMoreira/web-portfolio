@@ -14,7 +14,7 @@ export function FirstContent({ dictionary }: { dictionary: DictionaryType }) {
         </div>
 
         <div>
-          <h2 className="font-bold text-5xl">
+          <h2 className="font-bold lg:text-5xl text-4xl">
             <span>Henrique </span>
             <span className="text-[#7E74F1]">Braga.</span>
           </h2>
