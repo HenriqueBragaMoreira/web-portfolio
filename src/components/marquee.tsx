@@ -24,7 +24,7 @@ export function Marquee({
         "group flex gap-[--gap] motion-reduce:snap-x motion-reduce:snap-mandatory motion-reduce:overflow-x-scroll",
         "[--duration:20s] [--gap:1rem]",
         "[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]",
-        vertical ? "flex-col overflow-hidden" : "overflow-x-hidden ",
+        vertical ? "lg:flex-col overflow-hidden" : "overflow-x-hidden ",
         className
       )}
       {...props}
@@ -32,9 +32,9 @@ export function Marquee({
       <div
         className={cn(
           "flex items-center gap-[--gap] motion-reduce:animate-none motion-reduce:[&>*]:snap-start",
-          vertical ? "flex-col animate-marquee-vertical" : "animate-marquee-horizontal",
+          vertical && "lg:flex-col lg:animate-marquee-vertical animate-marquee-horizontal",
           pauseOnHover && "group-hover:animate-pause",
-          reverse && "animate-reverse"
+          reverse && "lg:animate-reverse animate-reverse"
         )}
       >
         {children}
@@ -42,9 +42,9 @@ export function Marquee({
       <div
         className={cn(
           "flex items-center gap-[--gap] motion-reduce:hidden motion-reduce:animate-none",
-          vertical ? "flex-col animate-marquee-vertical" : "animate-marquee-horizontal",
+          vertical && "lg:flex-col lg:animate-marquee-vertical animate-marquee-horizontal",
           pauseOnHover && "group-hover:animate-pause",
-          reverse && "animate-reverse"
+          reverse && "lg:animate-reverse animate-reverse"
         )}
         aria-hidden
       >
