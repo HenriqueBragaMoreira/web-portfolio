@@ -74,7 +74,11 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" }
         },
-        marquee: {
+        "marquee-h": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap, 1rem)))" }
+        },
+        "marquee-v": {
           from: { transform: "translateY(0)" },
           to: { transform: "translateY(calc(-100% - var(--gap, 1rem)))" }
         }
@@ -82,7 +86,8 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        marquee: "marquee var(--duration, 20s) linear infinite"
+        "marquee-horizontal": "marquee-h var(--duration, 20s) linear infinite",
+        "marquee-vertical": "marquee-v var(--duration, 20s) linear infinite"
       }
     }
   },
