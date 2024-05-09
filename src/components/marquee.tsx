@@ -29,7 +29,7 @@ export function Marquee({
       <div
         className={cn(
           "flex flex-col animate-marquee items-center gap-[--gap] motion-reduce:animate-none motion-reduce:[&>*]:snap-start",
-          pauseOnHover && "group-hover:[animation-play-state:_paused]",
+          pauseOnHover && "group-hover:animate-pause",
           reverse && "animate-reverse"
         )}
       >
@@ -38,7 +38,7 @@ export function Marquee({
       <div
         className={cn(
           "flex flex-col animate-marquee items-center gap-[--gap] motion-reduce:hidden motion-reduce:animate-none",
-          pauseOnHover && "group-hover:[animation-play-state:_paused]",
+          pauseOnHover && "group-hover:animate-pause",
           reverse && "animate-reverse"
         )}
         aria-hidden
