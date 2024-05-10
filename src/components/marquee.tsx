@@ -21,10 +21,10 @@ export function Marquee({
     <div
       role="marquee"
       className={cn(
-        "group flex gap-[--gap] motion-reduce:snap-x motion-reduce:snap-mandatory motion-reduce:overflow-x-scroll ",
+        "group flex overflow-x-hidden gap-[--gap] motion-reduce:snap-x motion-reduce:snap-mandatory motion-reduce:overflow-x-scroll ",
         "[--duration:20s] [--gap:1rem]",
         "[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]",
-        vertical ? "lg:flex-col overflow-hidden" : "overflow-x-hidden ",
+        vertical && "lg:flex-col lg:overflow-hidden",
         className
       )}
       {...props}
@@ -41,7 +41,7 @@ export function Marquee({
       </div>
       <div
         className={cn(
-          "flex items-center gap-[--gap] motion-reduce:hidden motion-reduce:animate-none",
+          "flex animate-marquee-horizontal items-center gap-[--gap] motion-reduce:hidden motion-reduce:animate-none",
           vertical && "lg:flex-col lg:animate-marquee-vertical",
           pauseOnHover && "group-hover:animate-pause",
           reverse && "lg:animate-reverse animate-reverse"
