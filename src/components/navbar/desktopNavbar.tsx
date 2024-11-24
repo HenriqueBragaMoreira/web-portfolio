@@ -1,4 +1,7 @@
-import { Button } from "../ui/button";
+import { DictionaryType } from "@/models/translate";
+import Link from "next/link";
+import { ToggleLanguage } from "../toggleLanguage";
+import { ToggleTheme } from "../toggleTheme";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -6,10 +9,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle
 } from "../ui/navigation-menu";
-import { ToggleTheme } from "../toggleTheme";
-import { ToggleLanguage } from "../toggleLanguage";
-import Link from "next/link";
-import { DictionaryType } from "@/models/translate";
+import { CurriculumDialog } from "./curriculumDialog";
 
 type DesktopNavbarProps = {
   dictionary: DictionaryType;
@@ -55,9 +55,7 @@ export function DesktopNavbar({ dictionary }: DesktopNavbarProps) {
           <ToggleLanguage dictionary={dictionary} />
           <ToggleTheme dictionary={dictionary} />
         </div>
-        <Button className="p-5 border-foreground" variant="outline">
-          {dictionary.navbar["resume-download-button"]}
-        </Button>
+        <CurriculumDialog dictionary={dictionary} />
       </div>
     </>
   );

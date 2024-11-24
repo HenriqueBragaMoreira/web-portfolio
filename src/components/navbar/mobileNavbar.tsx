@@ -1,9 +1,10 @@
-import { Award, CirclePlus, FolderGit2, Menu, Phone } from "lucide-react";
-import { Button } from "../ui/button";
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "../ui/sheet";
+import { DictionaryType } from "@/models/translate";
+import { handleDownloadCurriculum } from "@/utils/downloadCurriculum";
+import { Award, CirclePlus, Download, FolderGit2, Menu, Phone } from "lucide-react";
 import { ToggleLanguage } from "../toggleLanguage";
 import { ToggleTheme } from "../toggleTheme";
-import { DictionaryType } from "@/models/translate";
+import { Button } from "../ui/button";
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "../ui/sheet";
 
 type MobileNavbarProps = {
   dictionary: DictionaryType;
@@ -44,7 +45,13 @@ export function MobileNavbar({ dictionary }: MobileNavbarProps) {
           </Button>
         </div>
         <div className="border-t border-[#656D72]/20 my-5" />
-        <Button className="w-full h-12">{dictionary.navbar["resume-download-button"]}</Button>
+        <Button
+          onClick={() => handleDownloadCurriculum()}
+          className="flex items-center gap-2 w-full h-12"
+        >
+          <Download size={20} />
+          {dictionary.navbar["resume-download-button"]}
+        </Button>
       </SheetContent>
     </Sheet>
   );
