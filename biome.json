@@ -1,0 +1,90 @@
+{
+  "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "css": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": false
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "javascript": {
+    "formatter": {
+      "trailingCommas": "es5",
+      "lineEnding": "lf"
+    },
+    "globals": ["React"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "all": true,
+      "style": {
+        "recommended": true,
+        "noDefaultExport": "error",
+        "noImplicitBoolean": "off"
+      },
+      "suspicious": {
+        "all": true,
+        "noReactSpecificProps": "off"
+      },
+      "complexity": {
+        "all": true
+      },
+      "correctness": {
+        "all": true,
+        "useImportExtensions": "off"
+      },
+      "performance": {
+        "all": true
+      },
+      "security": {
+        "all": true
+      }
+    }
+  },
+  "files": {
+    "ignore": ["node_modules"]
+  },
+  "overrides": [
+    {
+      "include": [
+        "src/app/**/page.tsx",
+        "src/app/**/layout.tsx",
+
+        "*.config.js",
+        "*.config.mjs",
+        "*.config.ts"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["src/@types/**/*.d.ts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUndeclaredVariables": "off"
+          }
+        }
+      }
+    }
+  ]
+}
