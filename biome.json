@@ -31,6 +31,10 @@
     "enabled": true,
     "rules": {
       "all": true,
+      "a11y": {
+        "all": true,
+        "noSvgWithoutTitle": "off"
+      },
       "style": {
         "recommended": true,
         "noDefaultExport": "error",
