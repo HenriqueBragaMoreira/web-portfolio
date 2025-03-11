@@ -12,8 +12,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --text-color-primary: var(--text-primary);
-  --text-color-secondary: var(--text-secondary);
+  --color-primary: var(--text-primary);
+  --color-secondary: var(--text-secondary);
 }
 
 @layer base {
