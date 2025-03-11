@@ -1,11 +1,14 @@
+import { AboutSection } from "./sections/about";
 import { IntroSection } from "./sections/intro";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center">
-      <IntroSection />
+    <main className="flex flex-col gap-[120px] items-center">
+      <div className="flex flex-col gap-20">
+        <IntroSection />
 
-      <section id="about" data-section-name="about" className="h-[50vh]" />
+        <AboutSection />
+      </div>
       <section id="work" data-section-name="work" className="h-[50vh]" />
       <section
         id="experience"
