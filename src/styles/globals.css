@@ -20,6 +20,9 @@
   body {
     @apply bg-background text-primary;
   }
+  section {
+    @apply scroll-mt-20;
+  }
 }
 
 ::-webkit-scrollbar {

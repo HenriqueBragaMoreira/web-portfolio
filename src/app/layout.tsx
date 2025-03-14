@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { Navbar } from "@/components/navbar";
 import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
@@ -37,8 +38,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} font-sans antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>
