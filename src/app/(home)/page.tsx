@@ -1,4 +1,5 @@
 import { AboutSection } from "./sections/about";
+import { ExperiencieSection } from "./sections/experiencie";
 import { IntroSection } from "./sections/intro";
 import { WorkSection } from "./sections/work";
 
@@ -13,11 +14,8 @@ export default function Home() {
 
       <WorkSection />
 
-      <section
-        id="experience"
-        data-section-name="experience"
-        className="h-[50vh]"
-      />
+      <ExperiencieSection />
+
       <section
         id="education"
         data-section-name="education"
