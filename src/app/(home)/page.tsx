@@ -1,5 +1,6 @@
 import { AboutSection } from "./sections/about";
 import { IntroSection } from "./sections/intro";
+import { WorkSection } from "./sections/work";
 
 export default function Home() {
   return (
@@ -9,7 +10,9 @@ export default function Home() {
 
         <AboutSection />
       </div>
-      <section id="work" data-section-name="work" className="h-[50vh]" />
+
+      <WorkSection />
+
       <section
         id="experience"
         data-section-name="experience"
