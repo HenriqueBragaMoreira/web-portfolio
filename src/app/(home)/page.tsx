@@ -1,4 +1,5 @@
 import { AboutSection } from "./sections/about";
+import { BlogSection } from "./sections/blog";
 import { EducationSection } from "./sections/education";
 import { ExperiencieSection } from "./sections/experiencie";
 import { IntroSection } from "./sections/intro";
@@ -24,7 +25,8 @@ export default function Home() {
 
       <StackSection />
 
-      <section id="blog" data-section-name="blog" className="h-[50vh]" />
+      <BlogSection />
+
       <section id="contact" data-section-name="contact" className="h-[50vh]" />
     </main>
   );
