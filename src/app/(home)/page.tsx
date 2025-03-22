@@ -1,5 +1,6 @@
 import { AboutSection } from "./sections/about";
 import { BlogSection } from "./sections/blog";
+import { ContactSection } from "./sections/contact";
 import { EducationSection } from "./sections/education";
 import { ExperiencieSection } from "./sections/experiencie";
 import { IntroSection } from "./sections/intro";
@@ -27,7 +28,9 @@ export default function Home() {
 
       <BlogSection />
 
-      <section id="contact" data-section-name="contact" className="h-[50vh]" />
+      <ContactSection />
+
+      <footer />
     </main>
   );
 }
