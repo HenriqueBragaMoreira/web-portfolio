@@ -93,6 +93,7 @@ export function Navbar() {
 
         <button
           type="button"
+          aria-label="Navbar Trigger"
           onClick={() => handleNavbarVisiblyToggle()}
           className={cx(
             "z-50 size-8 cursor-pointer rounded-[6px] flex items-center justify-center transition-all duration-400",

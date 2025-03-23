@@ -25,5 +25,9 @@ function getSnapshot() {
 export function LocalTime() {
   const hora = useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
 
-  return <span className="text-primary">{hora}</span>;
+  return (
+    <span className="text-primary" suppressHydrationWarning>
+      {hora}
+    </span>
+  );
 }

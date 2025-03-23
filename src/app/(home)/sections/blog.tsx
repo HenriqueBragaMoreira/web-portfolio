@@ -34,6 +34,8 @@ export function BlogSection() {
               <Image
                 src="https://framerusercontent.com/images/Z6A1UUL2IYYsOynJLfYEMuXTk.png?scale-down-to=1024"
                 className="rounded-lg object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
                 alt="Blog 1"
                 fill
               />

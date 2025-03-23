@@ -9,7 +9,7 @@ export function Footer() {
           href="https://github.com/HenriqueBragaMoreira"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary"
+          className="text-primary underline"
         >
           Henrique Braga
         </Link>

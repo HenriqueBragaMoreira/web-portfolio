@@ -25,6 +25,7 @@ export function HoverCardProject({
           alt={title}
           width={500}
           height={500}
+          priority
           className="transition-transform duration-500 group-hover:scale-105"
         />
       </div>
