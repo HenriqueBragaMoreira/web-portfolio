@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import "@/styles/globals.css";
 
@@ -41,7 +42,10 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} font-sans antialiased`}>
         <Navbar />
-        {children}
+        <main className="flex flex-col gap-[120px] [&>*:last-child]:mt-[-60px] items-center">
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );

@@ -9,7 +9,7 @@ import { WorkSection } from "./sections/work";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-[120px] items-center">
+    <>
       <div className="flex flex-col gap-20">
         <IntroSection />
 
@@ -29,8 +29,6 @@ export default function Home() {
       <BlogSection />
 
       <ContactSection />
-
-      <footer />
-    </main>
+    </>
   );
 }
