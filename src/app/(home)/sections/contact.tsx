@@ -16,7 +16,7 @@ export function ContactSection() {
     >
       <h2 className="text-xl font-medium leading-6">Vamos conversar</h2>
 
-      <div className="flex gap-8">
+      <div className="flex gap-8 w-full">
         <div className="flex flex-col gap-8 pl-4 border-l border-foreground">
           <h3 className="text-secondary font-medium">
             Horário para mim: <LocalTime />

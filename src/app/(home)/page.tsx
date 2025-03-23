@@ -1,3 +1,4 @@
+import { FadeIn } from "@/components/motion/fadeIn";
 import { AboutSection } from "./sections/about";
 import { BlogSection } from "./sections/blog";
 import { ContactSection } from "./sections/contact";
@@ -11,24 +12,40 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col gap-20">
-        <IntroSection />
+        <FadeIn>
+          <IntroSection />
+        </FadeIn>
 
-        <AboutSection />
+        <FadeIn>
+          <AboutSection />
+        </FadeIn>
       </div>
 
-      <WorkSection />
+      <FadeIn>
+        <WorkSection />
+      </FadeIn>
 
-      <ExperiencieSection />
+      <FadeIn>
+        <ExperiencieSection />
+      </FadeIn>
 
-      <EducationSection />
+      <FadeIn>
+        <EducationSection />
+      </FadeIn>
 
       {/* <section data-section-name="my certifications" /> */}
 
-      <StackSection />
+      <FadeIn>
+        <StackSection />
+      </FadeIn>
 
-      <BlogSection />
+      <FadeIn>
+        <BlogSection />
+      </FadeIn>
 
-      <ContactSection />
+      <FadeIn className="max-w-[700px] w-full">
+        <ContactSection />
+      </FadeIn>
     </>
   );
 }
