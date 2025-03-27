@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import "@/styles/globals.css";
+import { cx } from "cva";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -44,6 +46,27 @@ export default function RootLayout({
         <Navbar />
         <main className="flex flex-col gap-[120px] [&>*:last-child]:mt-[-60px] items-center">
           {children}
+          <Toaster
+            toastOptions={{
+              unstyled: true,
+              classNames: {
+                toast: cx(
+                  "flex items-center gap-1.5 rounded-xl border border-foreground bg-background p-4 font-sans text-primary/70 text-sm shadow-lg",
+                  "h-(--front-toast-height) w-(--width)"
+                ),
+                description: "text-muted-fg",
+                closeButton: cx(
+                  "absolute top-0 left-0 grid size-5 cursor-pointer place-content-center rounded-full border bg-bg text-fg transition",
+                  "transform-(--toast-close-button-transform)"
+                ),
+                icon: cx(
+                  "relative flex size-4 shrink-0 items-center",
+                  "mr-(--toast-icon-margin-end) ml-(--toast-icon-margin-start)",
+                  "*:mr-(--toast-svg-margin-start) *:ml-(--toast-svg-margin-start) *:size-5"
+                ),
+              },
+            }}
+          />
           <Footer />
         </main>
       </body>
