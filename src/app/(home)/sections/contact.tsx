@@ -3,9 +3,8 @@ import { Github } from "@/components/icons/github";
 import { Instagram } from "@/components/icons/instagram";
 import { Linkedin } from "@/components/icons/linkedin";
 import { Phone } from "lucide-react";
-import { Input } from "./components/input";
+import { ContactForm } from "./components/contactForm";
 import { LocalTime } from "./components/localTime";
-import { Textarea } from "./components/textarea";
 
 export function ContactSection() {
   return (
@@ -84,23 +83,7 @@ export function ContactSection() {
         <div className="flex flex-col gap-4 w-full">
           <h3 className="font-medium leading-6">Entre em contato</h3>
 
-          <div className="flex flex-col gap-5 h-full">
-            <Input type="text" placeholder="Your name" />
-
-            <Input type="email" placeholder="Your Email address" />
-
-            <Textarea
-              className="flex-1 resize-none min-h-[180px]"
-              placeholder="Mensagem"
-            />
-
-            <button
-              className="py-2 px-4 rounded-md bg-primary text-background cursor-pointer hover:bg-primary/60 transition-colors duration-300"
-              type="submit"
-            >
-              Enviar
-            </button>
-          </div>
+          <ContactForm />
         </div>
       </div>
     </section>
