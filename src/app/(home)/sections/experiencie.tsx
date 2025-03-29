@@ -31,7 +31,7 @@ export function ExperiencieSection() {
       data-section-name="experience"
       className="flex flex-col gap-8 justify-center max-w-[700px] w-full"
     >
-      <h2 className="text-xl font-medium leading-6">Experiência</h2>
+      <h2 className="md:text-xl font-medium leading-6">Experiência</h2>
 
       <div className="flex flex-col gap-12">
         {experiences.map((experience) => (
@@ -42,29 +42,29 @@ export function ExperiencieSection() {
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-0.5">
                 <MapPin size={14} />
-                <span className="text-sm text-secondary">
+                <span className="text-[13px] md:text-sm text-secondary">
                   {experience.location}
                 </span>
               </div>
 
               <div className="flex justify-between items-center">
-                <h3 className="font-medium leading-[19.4px]">
+                <h3 className="text-sm md:text-base font-medium leading-[19.4px]">
                   {experience.company}
                 </h3>
 
-                <span className="text-sm text-secondary">
+                <span className="text-[13px] md:text-sm text-secondary">
                   {experience.period}
                 </span>
               </div>
 
-              <span className="text-sm text-secondary">
+              <span className="text-[13px] md:text-sm text-secondary">
                 {experience.position}
               </span>
             </div>
 
             <ul className="pl-4 space-y-2 list-disc text-secondary">
               {experience.description.map((description) => (
-                <li key={description}>{description}</li>
+                <li className="text-sm md:text-base" key={description}>{description}</li>
               ))}
             </ul>
           </div>

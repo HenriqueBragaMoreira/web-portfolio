@@ -11,7 +11,7 @@ export function WorkSection() {
       className="flex flex-col gap-8 justify-center max-w-[700px] w-full"
     >
       <div className="flex justify-between items-center">
-        <h2 className="text-xl font-medium leading-6">
+        <h2 className="md:text-xl font-medium leading-6">
           Alguns dos meus projetos
         </h2>
 
@@ -19,12 +19,12 @@ export function WorkSection() {
           href="/work"
           className="flex gap-0.5 items-center text-secondary hover:text-primary"
         >
-          <span>Ver todos</span>
+          <span className="text-sm md:text-base">Ver todos</span>
           <ArrowUpRight size={16} />
         </a>
       </div>
 
-      <div className="grid grid-cols-2 grid-rows-2 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-3">
         {projects.map((item) => (
           <HoverCardProject
             key={item}

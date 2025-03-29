@@ -21,7 +21,7 @@ export default function Home() {
         </FadeIn>
       </div>
 
-      <FadeIn>
+      <FadeIn className="flex items-center justify-center w-full">
         <WorkSection />
       </FadeIn>
 
@@ -35,7 +35,7 @@ export default function Home() {
 
       {/* <section data-section-name="my certifications" /> */}
 
-      <FadeIn>
+      <FadeIn className="w-full max-w-[700px]">
         <StackSection />
       </FadeIn>
 
