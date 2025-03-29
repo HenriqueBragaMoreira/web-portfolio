@@ -56,18 +56,18 @@ export function StackSection() {
       className="flex flex-col gap-8 justify-center max-w-[700px] w-full"
     >
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-medium leading-6">Stack</h2>
+        <h2 className="md:text-xl font-medium leading-6">Stack</h2>
 
         <Link
           href="/stack"
-          className="flex gap-0.5 items-center text-secondary hover:text-primary"
+          className="flex gap-0.5 items-center text-sm md:text-base text-secondary hover:text-primary"
         >
           <span>Ver todas</span>
           <ArrowUpRight size={16} />
         </Link>
       </div>
 
-      <div className="grid grid-cols-2 grid-rows-2 gap-8">
+      <div className="grid sm:grid-cols-2 sm:grid-rows-2 gap-8">
         {stacks.slice(0, 6).map((item) => (
           <div
             key={item.name}
@@ -84,9 +84,9 @@ export function StackSection() {
               </div>
             </div>
 
-            <div>
+            <div className="flex flex-col md:gap-1">
               <div className="flex items-center gap-1">
-                <h3 className="font-medium">{item.name}</h3>
+                <h3 className="text-sm md:text-base font-medium">{item.name}</h3>
 
                 <ArrowUpRight
                   className="text-secondary group-hover:text-primary/80"
@@ -94,7 +94,7 @@ export function StackSection() {
                 />
               </div>
 
-              <span className="text-sm text-secondary">{item.description}</span>
+              <span className="text-[13px] md:text-sm text-secondary">{item.description}</span>
             </div>
           </div>
         ))}

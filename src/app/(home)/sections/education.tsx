@@ -26,7 +26,7 @@ export function EducationSection() {
       data-section-name="education"
       className="flex flex-col gap-8 justify-center max-w-[700px] w-full"
     >
-      <h2 className="text-xl font-medium leading-6">Educação</h2>
+      <h2 className="md:text-xl font-medium leading-6">Educação</h2>
 
       <div className="flex flex-col gap-12">
         {education.map((item) => (
@@ -35,7 +35,7 @@ export function EducationSection() {
             className="flex flex-col gap-8 pl-4 border-l border-foreground"
           >
             <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-between text-secondary text-sm">
+              <div className="flex items-center justify-between text-secondary text-[13px] md:text-sm">
                 <div className="flex items-center gap-0.5">
                   <MapPin size={14} />
 
@@ -45,11 +45,11 @@ export function EducationSection() {
                 <span>{item.period}</span>
               </div>
 
-              <h3 className="text-primary font-medium leading-[19.2px]">
+              <h3 className="text-primary font-medium leading-[19.2px] text-sm md:text-base">
                 {item.course}
               </h3>
 
-              <span className="text-sm text-secondary">{item.institution}</span>
+              <span className="text-[13px] md:text-sm text-secondary">{item.institution}</span>
             </div>
 
             <span className="text-sm text-secondary">{item.description}</span>
