@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="flex justify-between items-center max-w-[700px] w-full pt-2 pb-4 border-t border-foreground text-sm text-secondary">
+    <footer className="flex flex-col-reverse md:flex-row md:justify-between gap-4 md:gap-0 items-center max-w-[700px] w-full pt-2 pb-4 border-t border-foreground text-[13px] md:text-sm text-secondary">
       <p>
         Desenvolvido por{" "}
         <Link
@@ -15,7 +15,7 @@ export function Footer() {
         </Link>
       </p>
 
-      <span>© Copyright 2025</span>
+      <span className="">© Copyright 2025</span>
     </footer>
   );
 }
