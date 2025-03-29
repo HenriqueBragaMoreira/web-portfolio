@@ -5,9 +5,9 @@ export function AboutSection() {
       data-section-name="about"
       className="flex flex-col gap-8 justify-center max-w-[700px] w-full"
     >
-      <h2 className="text-xl font-medium leading-6">Sobre mim</h2>
+      <h2 className="md:text-xl font-medium leading-6">Sobre mim</h2>
 
-      <div className="flex flex-col gap-5 text-secondary">
+      <div className="flex flex-col gap-5 text-secondary text-sm md:text-base">
         <p className="leading-[22.4px]">
           Olá, sou Henrique Braga, um Desenvolvedor de Software com 5 anos de
           experiência na criação de soluções digitais eficientes e intuitivas.
