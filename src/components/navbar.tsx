@@ -11,8 +11,9 @@ function NavbarBackgrond() {
     <div
       className={cx(
         "absolute left-1/2 -translate-x-1/2 bg-[#242424] rounded-[8px] transition-all duration-700",
-        "group-data-[visible=true]:w-[558px] group-data-[visible=true]:h-9 group-data-[visible=true]:top-[-2px]",
-        "group-data-[visible=false]:size-8"
+        "group-data-[visible=true]:w-[220px] group-data-[visible=true]:h-[380px] group-data-[visible=true]:top-[-8px] group-data-[visible=false]:top-0",
+        "sm:group-data-[visible=true]:w-[558px] sm:group-data-[visible=true]:h-9 sm:group-data-[visible=true]:top-[-2px]",
+        "group-data-[visible=false]:size-4 sm:group-data-[visible=false]:size-8"
       )}
       style={{
         zIndex: -1,
@@ -30,14 +31,21 @@ function NavbarItemsContent({
 }) {
   const navbarItemsContentStyle = cva({
     base: [
-      "absolute flex items-center gap-4 transition-all",
+      "absolute flex flex-col items-center gap-5 transition-all",
+      "sm:flex-row sm:gap-4",
       "group-data-[visible=true]:duration-[1400ms] group-data-[visible=true]:translate-x-0 group-data-[visible=true]:opacity-100",
       "group-data-[visible=false]:opacity-0 group-data-[visible=false]:duration-200 group-data-[visible=false]:invisible",
     ],
     variants: {
       variant: {
-        right: ["right-full pr-4 group-data-[visible=false]:translate-x-12"],
-        left: ["left-full pl-4 group-data-[visible=false]:-translate-x-12"],
+        right: [
+          "-right-[22px] top-13 group-data-[visible=false]:-translate-y-12",
+          "sm:right-full sm:top-1.5 sm:pr-4 sm:group-data-[visible=false]:translate-x-12 sm:group-data-[visible=false]:-translate-y-0",
+        ],
+        left: [
+          "-right-[20px] top-[212px] pl-1 group-data-[visible=false]:-translate-y-12",
+          "sm:left-full sm:top-1.5 sm:pl-4 sm:group-data-[visible=false]:-translate-x-12 sm:group-data-[visible=false]:-translate-y-0",
+        ],
       },
     },
   });
