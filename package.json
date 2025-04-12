@@ -11,6 +11,7 @@
     "format": "biome check --write"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.7",
     "@react-email/components": "0.0.34",
     "lucide-react": "^0.479.0",
     "motion": "^12.5.0",
@@ -18,7 +19,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "resend": "^4.1.2",
-    "sonner": "^2.0.1"
+    "sonner": "^2.0.1",
+    "tw-animate-css": "^1.2.5"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",

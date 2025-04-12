@@ -1,54 +1,9 @@
-import { NestIcon } from "@/components/icons/stacks/nest";
-import { NextjsIcon } from "@/components/icons/stacks/nextjs";
-import { NodeIcon } from "@/components/icons/stacks/node";
-import { ReactIcon } from "@/components/icons/stacks/react";
-import { TailwindIcon } from "@/components/icons/stacks/tailwindcss";
-import { VitestIcon } from "@/components/icons/stacks/vitest";
-import { cn } from "@/lib/cva";
+import { stacks } from "@/data/stacks";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-
-interface Stack {
-  name: string;
-  icon: React.ElementType;
-  description: string;
-  className?: string;
-}
+import { DialogStackInfo } from "./components/dialogStackInfo";
 
 export function StackSection() {
-  const stacks: Stack[] = [
-    {
-      name: "Next.js",
-      icon: NextjsIcon,
-      description: "Framework full-stack para web.",
-    },
-    {
-      name: "React",
-      icon: ReactIcon,
-      description: "Biblioteca para construção de interfaces.",
-    },
-    {
-      name: "Tailwind CSS",
-      icon: TailwindIcon,
-      description: "Framework CSS repleto de recursos.",
-    },
-    {
-      name: "Vitest",
-      icon: VitestIcon,
-      description: "Framework de testes.",
-    },
-    {
-      name: "NodeJS",
-      icon: NodeIcon,
-      description: "Ambiente de execução JavaScript.",
-    },
-    {
-      name: "NestJS",
-      icon: NestIcon,
-      description: "Framework progressivo para Node.js.",
-    },
-  ];
-
   return (
     <section
       id="stack"
@@ -68,35 +23,8 @@ export function StackSection() {
       </div>
 
       <div className="grid sm:grid-cols-2 sm:grid-rows-2 gap-8">
-        {stacks.slice(0, 6).map((item) => (
-          <div
-            key={item.name}
-            className="flex items-center gap-3 group cursor-pointer"
-          >
-            <div className="p-2 rounded-lg border border-foreground group-hover:border-primary/30">
-              <div
-                className={cn(
-                  "flex items-center justify-center bg-white rounded-full size-7",
-                  item.className
-                )}
-              >
-                <item.icon className="size-5" />
-              </div>
-            </div>
-
-            <div className="flex flex-col md:gap-1">
-              <div className="flex items-center gap-1">
-                <h3 className="text-sm md:text-base font-medium">{item.name}</h3>
-
-                <ArrowUpRight
-                  className="text-secondary group-hover:text-primary/80"
-                  size={16}
-                />
-              </div>
-
-              <span className="text-[13px] md:text-sm text-secondary">{item.description}</span>
-            </div>
-          </div>
+        {stacks.map((stack) => (
+          <DialogStackInfo key={stack.title} stack={stack} />
         ))}
       </div>
     </section>
