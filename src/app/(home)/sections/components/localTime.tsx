@@ -1,33 +1,13 @@
 "use client";
-import { useSyncExternalStore } from "react";
+import dynamic from "next/dynamic";
 
-function subscribe(callback: () => void) {
-  function update() {
-    callback();
-    const now = new Date();
-    const delay = 1000 - now.getMilliseconds();
-    setTimeout(update, delay);
+const ClientTimeDisplay = dynamic(
+  () => import("./clientTimeDisplay").then((mod) => mod.ClientTimeDisplay),
+  {
+    ssr: false,
   }
-
-  update();
-
-  return () => {};
-}
-
-function getSnapshot() {
-  return new Date().toLocaleTimeString("pt-BR", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: true,
-  });
-}
+);
 
 export function LocalTime() {
-  const hora = useSyncExternalStore(subscribe, getSnapshot, getSnapshot);
-
-  return (
-    <span className="text-primary" suppressHydrationWarning>
-      {hora}
-    </span>
-  );
+  return <ClientTimeDisplay />;
 }
