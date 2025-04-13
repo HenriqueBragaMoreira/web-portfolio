@@ -1,4 +1,4 @@
-export function ReactIcon(props: React.SVGProps<SVGSVGElement>) {
+export function ReactIcon(props: _SvgIconProps) {
   return (
     <svg
       height={2500}

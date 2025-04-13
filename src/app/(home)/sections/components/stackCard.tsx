@@ -23,7 +23,7 @@ export function StackCard({
         </div>
       </div>
 
-      <div className="flex flex-col md:gap-1">
+      <div className="flex flex-col items-start md:gap-1">
         <div className="flex items-center gap-1">
           <h3 className="text-sm md:text-base font-medium">{name}</h3>
 

@@ -1,4 +1,4 @@
-export function Linkedin(props: React.SVGProps<SVGSVGElement>) {
+export function Linkedin(props: _SvgIconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

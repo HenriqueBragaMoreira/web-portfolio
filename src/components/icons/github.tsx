@@ -1,4 +1,4 @@
-export function Github(props: React.SVGProps<SVGSVGElement>) {
+export function Github(props: _SvgIconProps) {
   return (
     <svg
       width="800px"

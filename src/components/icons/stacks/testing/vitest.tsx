@@ -1,4 +1,4 @@
-export function VitestIcon(props: React.SVGProps<SVGSVGElement>) {
+export function VitestIcon(props: _SvgIconProps) {
   return (
     <svg
       width="256px"

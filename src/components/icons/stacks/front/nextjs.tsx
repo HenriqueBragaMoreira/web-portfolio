@@ -1,4 +1,4 @@
-export function NextjsIcon(props: React.SVGProps<SVGSVGElement>) {
+export function NextjsIcon(props: _SvgIconProps) {
   return (
     <svg
       width="800px"
