@@ -25,8 +25,7 @@ function NavbarBackgrond() {
 function NavbarItemsContent({
   children,
   position,
-}: {
-  children: React.ReactNode;
+}: _WithChildren & {
   position: "left" | "right";
 }) {
   const navbarItemsContentStyle = cva({

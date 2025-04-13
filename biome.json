@@ -81,7 +81,12 @@
       }
     },
     {
-      "include": ["src/@types/**/*.d.ts"],
+      "include": [
+        "src/@types/**/*.d.ts",
+        "src/components/icons/**/*.tsx",
+        "src/app/**/layout.tsx",
+        "src/components/navbar.tsx"
+      ],
       "linter": {
         "rules": {
           "correctness": {

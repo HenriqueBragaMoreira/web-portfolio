@@ -35,11 +35,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: _WithChildren) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} font-sans antialiased`}>
