@@ -5,7 +5,7 @@ import { ContactSection } from "./sections/contact";
 import { EducationSection } from "./sections/education";
 import { ExperiencieSection } from "./sections/experiencie";
 import { IntroSection } from "./sections/intro";
-import { StackSection } from "./sections/stack";
+import { StacksSection } from "./sections/stacks";
 import { WorkSection } from "./sections/work";
 
 export default function Home() {
@@ -36,7 +36,7 @@ export default function Home() {
       {/* <section data-section-name="my certifications" /> */}
 
       <FadeIn className="w-full max-w-[700px]">
-        <StackSection />
+        <StacksSection />
       </FadeIn>
 
       <FadeIn>

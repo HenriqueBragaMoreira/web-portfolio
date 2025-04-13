@@ -44,7 +44,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} font-sans antialiased`}>
         <Navbar />
-        <main className="flex flex-col gap-[120px] [&>*:last-child]:mt-[-180px] items-center px-4 md:px-0 ">
+        <main className="flex flex-col gap-[120px] [&>*:last-child]:mt-[-180px] items-center px-4 md:px-0">
           {children}
           <Toaster
             toastOptions={{
