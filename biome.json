@@ -94,6 +94,17 @@
           }
         }
       }
+    },
+    {
+      "include": ["src/components/icons/**/*.ts"],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noReExportAll": "off",
+            "noBarrelFile": "off"
+          }
+        }
+      }
     }
   ]
 }

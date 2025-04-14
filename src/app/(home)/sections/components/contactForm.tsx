@@ -19,13 +19,13 @@ export function ContactForm() {
 
   return (
     <form action={formAction} className="flex flex-col gap-5 h-full">
-      <Input name="name" type="text" required placeholder="Your name" />
+      <Input name="name" type="text" required placeholder="Seu nome" />
 
       <Input
         name="email"
         type="email"
         required
-        placeholder="Your Email address"
+        placeholder="Seu melhor email"
       />
 
       <Textarea

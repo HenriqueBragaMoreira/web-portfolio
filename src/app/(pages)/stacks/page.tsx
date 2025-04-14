@@ -9,7 +9,7 @@ export default function StacksPage() {
       {stacks.map((item) => (
         <div key={item.title} className="flex flex-col gap-6">
           <div>
-            <h2 className="text-lg">{item.title}</h2>
+            <h2 className="md:text-lg">{item.title}</h2>
             <div className="bg-foreground h-px" />
           </div>
 
