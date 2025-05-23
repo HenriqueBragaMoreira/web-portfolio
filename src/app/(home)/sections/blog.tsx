@@ -12,7 +12,9 @@ export function BlogSection() {
       className="flex flex-col gap-8 justify-center max-w-[700px] w-full"
     >
       <div className="flex items-center justify-between">
-        <h2 className="md:text-xl font-medium leading-6">Artigos e publicações</h2>
+        <h2 className="md:text-xl font-medium leading-6">
+          Artigos e publicações
+        </h2>
 
         <Link
           href="/blog"

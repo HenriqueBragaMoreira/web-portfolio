@@ -81,7 +81,9 @@ export function ContactSection() {
         </div>
 
         <div className="flex flex-col gap-4 w-full">
-          <h3 className="text-sm md:text-base font-medium leading-4 md:leading-6">Entre em contato</h3>
+          <h3 className="text-sm md:text-base font-medium leading-4 md:leading-6">
+            Entre em contato
+          </h3>
 
           <ContactForm />
         </div>

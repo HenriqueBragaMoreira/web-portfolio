@@ -49,7 +49,9 @@ export function EducationSection() {
                 {item.course}
               </h3>
 
-              <span className="text-[13px] md:text-sm text-secondary">{item.institution}</span>
+              <span className="text-[13px] md:text-sm text-secondary">
+                {item.institution}
+              </span>
             </div>
 
             <span className="text-sm text-secondary">{item.description}</span>

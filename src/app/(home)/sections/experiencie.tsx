@@ -64,7 +64,9 @@ export function ExperiencieSection() {
 
             <ul className="pl-4 space-y-2 list-disc text-secondary">
               {experience.description.map((description) => (
-                <li className="text-sm md:text-base" key={description}>{description}</li>
+                <li className="text-sm md:text-base" key={description}>
+                  {description}
+                </li>
               ))}
             </ul>
           </div>

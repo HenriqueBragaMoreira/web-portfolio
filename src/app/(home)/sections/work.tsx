@@ -1,5 +1,5 @@
+import { HoverCardProject } from "@/components/hoverCardProject";
 import { ArrowUpRight } from "lucide-react";
-import { HoverCardProject } from "./components/hoverCardProject";
 
 export function WorkSection() {
   const projects = Array.from({ length: 4 }, (_, index) => index + 1);
@@ -16,7 +16,7 @@ export function WorkSection() {
         </h2>
 
         <a
-          href="/work"
+          href="/works"
           className="flex gap-0.5 items-center text-secondary hover:text-primary"
         >
           <span className="text-sm md:text-base">Ver todos</span>

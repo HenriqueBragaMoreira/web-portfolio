@@ -38,7 +38,9 @@ export function IntroSection() {
             <div className="flex items-center gap-1">
               <div className="bg-green-500 size-1.5 rounded-full" />
 
-              <p className="text-secondary text-xs md:text-sm">Available for work</p>
+              <p className="text-secondary text-xs md:text-sm">
+                Available for work
+              </p>
             </div>
           </div>
         </div>
