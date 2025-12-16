@@ -3,10 +3,21 @@ import { MapPin } from "lucide-react";
 export function ExperiencieSection() {
   const experiences = [
     {
+      company: "Grupo Permaneo",
+      position: "Desenvolvedor Front-End Pleno",
+      location: "São Paulo, SP",
+      period: "Jun 2025 - Presente",
+      description: [
+        "Atuei como desenvolvedor full stack no principal produto da empresa chamado Subido PRO, trazendo o projeto de uma empresa terceirizada para o time interno, aumentando o controle técnico, acelerando a evolução do produto e melhorando significativamente a experiência dos alunos",
+        "Atuei também em uma plataforma SaaS com múltiplos agentes de IA especializados chamada FuncionarIA, desenvolvendo interfaces focadas em produtividade, clareza de fluxos e usabilidade para gestores de tráfego",
+        "Idealizei e desenvolvi do zero uma CLI interna para geração de projetos baseada em respostas do usuário, padronizando arquiteturas iniciais, reduzindo erros e acelerando a criação de novos projetos, com documentação completa em Fumadocs.",
+      ],
+    },
+    {
       company: "blue",
       position: "Desenvolvedor Front-End Pleno",
       location: "São Paulo, SP",
-      period: "Jul 2024 - Presente",
+      period: "Jul 2024 - Jun 2025",
       description: [
         "Desenvolvi o Design System da empresa, criando pacotes independentes para UI e estilos, reduzindo o tempo de desenvolvimento em novos projetos em 35%.",
         "Publiquei pacotes independentes de UI e estilos no npm, garantindo uma consistência visual entre as aplicações e reduzindo o tempo de integração em novos projetos.",

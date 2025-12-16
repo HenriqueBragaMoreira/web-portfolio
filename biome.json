@@ -67,6 +67,7 @@
       "include": [
         "src/app/**/page.tsx",
         "src/app/**/layout.tsx",
+        "src/app/**/not-found.tsx",
 
         "*.config.js",
         "*.config.mjs",
