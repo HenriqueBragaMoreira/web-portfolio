@@ -1,0 +1,358 @@
+{
+  "Metadata": {
+    "title": "Henrique Braga · Desarrollador Full Stack",
+    "description": "Portafolio de Henrique Braga, desarrollador de software Full Stack en São Paulo, Brasil. Proyectos, experiencia, stack y contacto.",
+    "worksTitle": "Proyectos",
+    "worksDescription": "Proyectos de Henrique Braga, del front-end al back-end.",
+    "stacksTitle": "Stack",
+    "stacksDescription": "Lenguajes, frameworks y herramientas que Henrique Braga usa en su día a día."
+  },
+  "Nav": {
+    "label": "Navegación principal",
+    "open": "Abrir menú",
+    "close": "Cerrar menú",
+    "items": {
+      "intro": "Inicio",
+      "about": "Sobre mí",
+      "work": "Proyectos",
+      "experience": "Experiencia",
+      "education": "Formación",
+      "stacks": "Stack",
+      "contact": "Contacto"
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Idioma",
+    "pt-BR": "Português",
+    "en-US": "English",
+    "es-ES": "Español"
+  },
+  "Intro": {
+    "role": "Desarrollador Full Stack",
+    "location": "São Paulo, Brasil",
+    "status": "Abierto a propuestas",
+    "downloadCv": "Descargar CV",
+    "cvTooltip": "Descarga la versión en español. Cambia el idioma arriba para otras versiones.",
+    "photoAlt": "Foto de Henrique Braga"
+  },
+  "About": {
+    "title": "Sobre mí",
+    "p1": "Hola, soy Henrique Braga, desarrollador de software Full Stack con 5 años de experiencia creando soluciones digitales eficientes e intuitivas.",
+    "p2": "Mi camino en la tecnología empezó con la curiosidad por entender cómo funcionan los sistemas y las ganas de construir algo con impacto. Con los años he perfeccionado mis habilidades en front-end, back-end, arquitectura de software y experiencia de usuario, siempre enfocado en aplicaciones rápidas, accesibles y bien construidas de principio a fin."
+  },
+  "Work": {
+    "title": "Algunos de mis proyectos",
+    "seeAll": "Ver todos",
+    "pageTitle": "Proyectos"
+  },
+  "Project": {
+    "back": "Todos los proyectos",
+    "liveSite": "Ver sitio",
+    "sourceCode": "Ver código",
+    "privateRepo": "Código privado",
+    "notDeployed": "Sin despliegue público",
+    "year": "Año",
+    "role": "Rol",
+    "features": "Lo más destacado",
+    "stack": "Stack",
+    "screenshotAlt": "Captura de pantalla de {name}",
+    "items": {
+      "we-finance": {
+        "subtitle": "Finanzas compartidas para familias",
+        "role": "Proyecto personal · Full Stack",
+        "summary": "Plataforma de finanzas personales donde familias y parejas registran ingresos, gastos e inversiones en segundos y ven juntos a dónde va el dinero.",
+        "description": "Construí We Finance yo solo, desde la base de datos hasta la landing page. Es un monorepo con Turborepo: el front-end en Next.js y la API en NestJS con Prisma y PostgreSQL, autenticación con Better Auth y correos transaccionales con Resend. El dinero pertenece a un tablero compartido, así que todos sus miembros ven la misma información, y registrar un movimiento lleva pocos segundos.",
+        "features": {
+          "boards": "Tableros compartidos con roles (propietario, admin, miembro) e invitaciones por correo",
+          "auth": "Inicio de sesión con un código de verificación de 6 dígitos enviado por correo",
+          "transactions": "Ingresos, gastos e inversiones con estado, categorías, tarjetas, recurrencia y cuotas",
+          "analytics": "Dashboard con informes por período, comparativas, tendencias y exportación en CSV y PDF",
+          "planning": "Presupuestos, metas de ahorro y tarjetas de crédito con fecha de cierre"
+        }
+      },
+      "gesture-pro": {
+        "subtitle": "Dashboard de gestión de ventas",
+        "role": "Proyecto personal · Full Stack",
+        "summary": "Un dashboard para gestionar el catálogo de productos, las categorías y las ventas, con KPIs y gráficos mensuales.",
+        "description": "Aplicación full stack con front-end en Next.js y React y una API REST en FastAPI con SQLAlchemy y PostgreSQL. El catálogo se puede importar desde CSV, los filtros se guardan en la URL y la base de datos usa restricciones e índices pensados para mantener los datos consistentes.",
+        "features": {
+          "dashboard": "KPIs de ventas y gráficos mensuales de artículos vendidos e ingresos, en barras o líneas",
+          "filters": "Filtro por categoría guardado en la URL",
+          "products": "Tabla de productos con búsqueda, paginación y alta en un diálogo",
+          "csv": "Importación de productos y exportación de ventas en CSV",
+          "api": "API REST documentada con Swagger y base de datos con restricciones e índices"
+        }
+      }
+    }
+  },
+  "Experience": {
+    "title": "Experiencia",
+    "present": "Actualidad",
+    "items": {
+      "permaneo": {
+        "position": "Desarrollador Full Stack",
+        "bullets": {
+          "subidoPro": "Trabajé como desarrollador full stack en el producto principal de la empresa, Subido PRO, trayendo el proyecto de un proveedor externo al equipo interno, lo que aumentó el control técnico, aceleró la evolución del producto y mejoró notablemente la experiencia de los alumnos.",
+          "funcionarIa": "También trabajé en FuncionarIA, una plataforma SaaS con varios agentes de IA especializados, desarrollando interfaces centradas en la productividad, la claridad de los flujos y la usabilidad para gestores de tráfico.",
+          "cli": "Ideé y desarrollé desde cero una CLI interna que genera proyectos a partir de las respuestas del usuario, estandarizando arquitecturas iniciales, reduciendo errores y acelerando la creación de nuevos proyectos, con documentación completa en Fumadocs."
+        }
+      },
+      "blueSaude": {
+        "position": "Desarrollador Front-End",
+        "bullets": {
+          "designSystem": "Desarrollé el Design System de la empresa con paquetes independientes de UI y estilos, reduciendo un 35% el tiempo de desarrollo de nuevos proyectos.",
+          "npm": "Publiqué paquetes independientes de UI y estilos en npm, garantizando la coherencia visual entre aplicaciones y reduciendo el tiempo de integración en nuevos proyectos."
+        }
+      },
+      "anjun": {
+        "position": "Desarrollador de Software",
+        "bullets": {
+          "wms": "Lideré el equipo de front-end en el desarrollo de un WMS escalable con interfaces limpias, aumentando un 40% la eficiencia en la gestión de inventario.",
+          "apis": "Implementé integraciones con APIs RESTful usando datos de los equipos de back-end, reduciendo un 30% el tiempo de procesamiento de las peticiones.",
+          "tracking": "Desarrollé soluciones para gestionar la entrada y salida de productos en grandes almacenes, mejorando un 25% la precisión del seguimiento de artículos."
+        }
+      }
+    }
+  },
+  "Education": {
+    "title": "Formación",
+    "items": {
+      "unicid": {
+        "course": "Grado en Ciencias de la Computación",
+        "description": "Actualmente estudio Ciencias de la Computación, donde profundizo en estructuras de datos, algoritmos, lógica de programación y pensamiento computacional."
+      },
+      "etec": {
+        "course": "Bachillerato técnico en Desarrollo de Sistemas",
+        "description": "Durante esta formación desarrollé habilidades de programación y bases de datos con HTML, CSS, JavaScript, PHP, Java y MySQL, construyendo proyectos prácticos de desarrollo web y de software."
+      }
+    }
+  },
+  "Stacks": {
+    "title": "Stack",
+    "seeAll": "Ver todo",
+    "visit": "Visitar {name}",
+    "closeHint": "Haz clic fuera o pulsa Esc para cerrar",
+    "groups": {
+      "languages": "Lenguajes",
+      "frontend": "Front-End",
+      "backend": "Back-End",
+      "mobile": "Móvil",
+      "databases": "Bases de datos",
+      "testing": "Testing",
+      "packageManagers": "Gestores de paquetes",
+      "linters": "Linters y formateadores",
+      "tools": "Herramientas"
+    },
+    "items": {
+      "nextjs": {
+        "subtitle": "Framework full stack para la web.",
+        "description": "Next.js es un framework moderno de React con renderizado híbrido (SSR y SSG), enrutamiento intuitivo y rendimiento optimizado. Ideal para crear aplicaciones web escalables y rápidas con una gran experiencia de desarrollo."
+      },
+      "react": {
+        "subtitle": "Biblioteca para crear interfaces.",
+        "description": "Biblioteca de JavaScript para construir interfaces de usuario reactivas y basadas en componentes. Muy adoptada por su flexibilidad, rendimiento y su sólido ecosistema."
+      },
+      "tailwind": {
+        "subtitle": "Framework CSS lleno de recursos.",
+        "description": "Framework CSS utility-first para crear interfaces modernas y responsivas con rapidez. Su enfoque basado en clases facilita construir componentes con un estilo coherente."
+      },
+      "vitest": {
+        "subtitle": "Framework de testing.",
+        "description": "Framework de testing rápido y moderno para proyectos con Vite. Ofrece una experiencia similar a Jest, con rendimiento optimizado y soporte nativo para TypeScript."
+      },
+      "node": {
+        "subtitle": "Entorno de ejecución de JavaScript.",
+        "description": "Entorno de ejecución de JavaScript en el servidor, conocido por su alto rendimiento y su arquitectura basada en eventos. Ideal para crear APIs y aplicaciones escalables en tiempo real."
+      },
+      "nest": {
+        "subtitle": "Framework progresivo para Node.js.",
+        "description": "Framework back-end progresivo para Node.js que usa TypeScript y principios inspirados en Angular. Facilita crear APIs robustas y modulares con una arquitectura bien definida."
+      },
+      "javascript": {
+        "subtitle": "Lenguaje de programación dinámico.",
+        "description": "Lenguaje de programación ligero e interpretado, esencial para el desarrollo web. Admite paradigmas orientado a objetos, funcional e imperativo, y se usa tanto en navegadores como en el servidor con Node.js."
+      },
+      "typescript": {
+        "subtitle": "Superset tipado de JavaScript.",
+        "description": "Lenguaje que extiende JavaScript con tipado estático y funciones avanzadas de orientación a objetos. Facilita crear aplicaciones escalables y mejora la productividad con autocompletado y verificación de tipos."
+      },
+      "vite": {
+        "subtitle": "Bundler moderno para front-end.",
+        "description": "Herramienta de build y servidor de desarrollo ultrarrápido con soporte nativo para módulos ES. Ideal para proyectos con React y Vue, con recarga instantánea e integración con TypeScript."
+      },
+      "rsbuild": {
+        "subtitle": "Herramienta de build moderna.",
+        "description": "Sistema de build de alto rendimiento para aplicaciones front-end, centrado en la velocidad, la modularidad y la integración con React y TypeScript."
+      },
+      "ky": {
+        "subtitle": "Cliente HTTP moderno.",
+        "description": "Cliente HTTP basado en Fetch, con una API simple, ligera y ergonómica. Ideal para peticiones asíncronas en proyectos con JavaScript o TypeScript."
+      },
+      "zod": {
+        "subtitle": "Validador de esquemas tipado.",
+        "description": "Biblioteca TypeScript-first para validar e inferir datos. Facilita crear validaciones robustas con tipado estático y sin dependencias externas."
+      },
+      "tanstackQuery": {
+        "subtitle": "Gestor de estado asíncrono.",
+        "description": "Biblioteca para gestionar datos remotos (fetching, caché, sincronización y actualizaciones) en aplicaciones React. Reduce la complejidad de trabajar con datos asíncronos."
+      },
+      "reactHookForm": {
+        "subtitle": "Gestión de formularios para React.",
+        "description": "Biblioteca eficiente para manejar formularios en React, centrada en el rendimiento y en minimizar los re-renders. Admite validación, integración con otras bibliotecas y tipado con TypeScript."
+      },
+      "tanstackTable": {
+        "subtitle": "Toolkit para tablas dinámicas.",
+        "description": "Biblioteca potente y extensible para crear tablas en React, con ordenación, paginación, agrupación y virtualización."
+      },
+      "storybook": {
+        "subtitle": "Herramienta para design systems.",
+        "description": "Storybook es una herramienta para desarrollar y documentar componentes de interfaz de forma aislada. Permite crear, probar y visualizar componentes de forma interactiva, facilitando construir y mantener design systems escalables."
+      },
+      "axios": {
+        "subtitle": "Cliente HTTP basado en Promises.",
+        "description": "Axios es un cliente HTTP para JavaScript y TypeScript que simplifica las peticiones asíncronas. Con Promises, interceptores, manejo de errores y configuración global, se usa mucho en aplicaciones web y móviles para comunicarse con APIs."
+      },
+      "hono": {
+        "subtitle": "Framework ligero para APIs web.",
+        "description": "Microframework rápido y minimalista para crear APIs con JavaScript o TypeScript. Ideal para aplicaciones modernas, especialmente en edge runtimes."
+      },
+      "express": {
+        "subtitle": "Framework web minimalista.",
+        "description": "Framework HTTP para Node.js conocido por su simplicidad y flexibilidad al crear APIs y aplicaciones web. Muy usado en todo el ecosistema JavaScript."
+      },
+      "fastify": {
+        "subtitle": "Framework web de alto rendimiento.",
+        "description": "Framework rápido y con poco overhead para crear APIs en Node.js. Admite plugins y validación con JSON Schema y está optimizado para el rendimiento."
+      },
+      "drizzle": {
+        "subtitle": "ORM para TypeScript.",
+        "description": "Drizzle es un ORM moderno y con tipado seguro para TypeScript. Su enfoque cercano a SQL, con tipado estático y autocompletado completo, hace que trabajar con la base de datos sea más seguro, predecible y productivo."
+      },
+      "prisma": {
+        "subtitle": "ORM para Node.js y TypeScript.",
+        "description": "Prisma es un ORM moderno e intuitivo para Node.js y TypeScript. Simplifica el acceso a la base de datos con una API segura, tipada y de alto rendimiento, además de herramientas como migraciones, introspección y generación automática de tipos."
+      },
+      "reactNative": {
+        "subtitle": "Framework para crear apps móviles.",
+        "description": "React Native es una biblioteca de JavaScript para crear apps móviles con React. Permite crear apps nativas para iOS y Android con el mismo código base."
+      },
+      "expo": {
+        "subtitle": "Framework para crear apps móviles.",
+        "description": "Expo es un framework y un conjunto de herramientas que simplifica el desarrollo con React Native, con APIs nativas preconfiguradas, servicios en la nube y un flujo optimizado para crear y publicar apps móviles."
+      },
+      "nativewind": {
+        "subtitle": "Estilos de Tailwind para React Native.",
+        "description": "NativeWind permite usar clases utilitarias de Tailwind CSS en proyectos React Native. Convierte esas clases en estilos nativos, facilitando interfaces modernas y coherentes con la familiaridad del ecosistema Tailwind."
+      },
+      "mysql": {
+        "subtitle": "Base de datos relacional open source.",
+        "description": "Sistema de gestión de bases de datos relacionales robusto y muy adoptado. Usa SQL para manipular datos y es conocido por su rendimiento y estabilidad."
+      },
+      "postgresql": {
+        "subtitle": "Base de datos relacional avanzada.",
+        "description": "Sistema de gestión de bases de datos relacionales potente, con soporte para extensiones, transacciones complejas, JSON y un alto cumplimiento del estándar SQL."
+      },
+      "supabase": {
+        "subtitle": "Plataforma back-end sobre PostgreSQL.",
+        "description": "Alternativa a Firebase basada en PostgreSQL. Ofrece autenticación, APIs en tiempo real, almacenamiento y funciones serverless de forma simple y escalable."
+      },
+      "jest": {
+        "subtitle": "Framework de testing para JavaScript.",
+        "description": "Jest es un framework de testing para JavaScript centrado en la simplicidad y la velocidad. Ofrece una experiencia moderna y eficiente, con funciones útiles como snapshots, cobertura de código y aserciones."
+      },
+      "testingLibrary": {
+        "subtitle": "Biblioteca de testing para React.",
+        "description": "React Testing Library facilita escribir tests aislados para componentes React. Su API simula interacciones del usuario y verifica lo que renderiza el componente."
+      },
+      "npm": {
+        "subtitle": "Gestor por defecto de Node.js.",
+        "description": "Gestor de paquetes de Node.js que facilita instalar y gestionar las dependencias de proyectos JavaScript. Se usa mucho para compartir y reutilizar código entre proyectos."
+      },
+      "yarn": {
+        "subtitle": "Gestor rápido y fiable.",
+        "description": "Yarn es un gestor de paquetes rápido, seguro y fiable para proyectos JavaScript y TypeScript. Instala, actualiza y gestiona dependencias de forma eficiente, con instalaciones reproducibles gracias a una caché avanzada y lockfiles consistentes. También admite workspaces, lo que facilita gestionar monorepos con varios paquetes."
+      },
+      "pnpm": {
+        "subtitle": "Gestor basado en enlaces.",
+        "description": "pnpm es un gestor de paquetes ultrarrápido y eficiente para proyectos JavaScript y TypeScript. Usa enlaces simbólicos y un almacén global para ahorrar espacio en disco y acelerar las instalaciones. Tiene soporte nativo para workspaces, ideal para monorepos, y mantiene los proyectos consistentes y aislados."
+      },
+      "biome": {
+        "subtitle": "Linter y formateador moderno.",
+        "description": "Herramienta todo en uno que combina linting y formateo para JavaScript y TypeScript. Rápida, moderna y centrada en la productividad."
+      },
+      "eslint": {
+        "subtitle": "Linter extensible para JavaScript.",
+        "description": "Herramienta de análisis estático que detecta problemas e inconsistencias en código JavaScript y TypeScript. Muy configurable y con un enorme ecosistema de plugins."
+      },
+      "prettier": {
+        "subtitle": "Formateador de código con opinión.",
+        "description": "Formateador automático que estandariza el estilo del código en JavaScript, TypeScript, HTML, CSS y más, mejorando la legibilidad y la coherencia."
+      },
+      "cursor": {
+        "subtitle": "Editor de código con IA integrada.",
+        "description": "Editor moderno con soporte para varios lenguajes y funciones de colaboración con inteligencia artificial integrada que mejoran la productividad."
+      },
+      "vscode": {
+        "subtitle": "Editor de código extensible.",
+        "description": "Editor de código con soporte para muchos lenguajes de programación y herramientas de desarrollo. Muy usado para escribir, editar y depurar código."
+      },
+      "docker": {
+        "subtitle": "Plataforma de contenedores.",
+        "description": "Herramienta para crear, empaquetar y ejecutar aplicaciones en contenedores aislados. Hace que los entornos de desarrollo y producción sean portables, consistentes y escalables."
+      },
+      "insomnia": {
+        "subtitle": "Herramienta para probar APIs.",
+        "description": "Herramienta intuitiva para probar, documentar y depurar APIs REST y GraphQL, con entornos, autenticación, exportaciones y colecciones organizadas."
+      },
+      "androidStudio": {
+        "subtitle": "Entorno de desarrollo para Android.",
+        "description": "Entorno de desarrollo completo para apps Android, con herramientas de diseño, depuración, testing y publicación en Play Store."
+      },
+      "figma": {
+        "subtitle": "Herramienta de diseño colaborativo.",
+        "description": "Plataforma web para diseñar interfaces y prototipos, con colaboración en tiempo real entre diseñadores y desarrolladores."
+      },
+      "notion": {
+        "subtitle": "Plataforma de productividad.",
+        "description": "Herramienta versátil para gestión de proyectos, notas, bases de datos y colaboración en equipo, muy usada por equipos de producto y tecnología."
+      },
+      "postman": {
+        "subtitle": "Herramienta para probar APIs.",
+        "description": "Postman es una plataforma completa para desarrollar, probar y documentar APIs. Envía peticiones HTTP, valida respuestas, automatiza tests y facilita la colaboración en APIs REST, GraphQL y otras."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Hablemos",
+    "localTime": "Mi hora local:",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "socials": "Redes",
+    "formTitle": "Ponte en contacto",
+    "form": {
+      "name": "Tu nombre",
+      "email": "Tu correo",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando tu mensaje...",
+      "success": "¡Mensaje enviado! Te respondo lo antes posible.",
+      "error": "No pude enviar tu mensaje. Inténtalo de nuevo o escríbeme directamente.",
+      "invalid": "Revisa los campos: un nombre, un correo válido y un mensaje de al menos 10 caracteres."
+    }
+  },
+  "CopyEmail": {
+    "copy": "Copiar correo",
+    "copied": "¡Copiado!"
+  },
+  "Footer": {
+    "builtBy": "Desarrollado por"
+  },
+  "Header": {
+    "back": "Inicio"
+  },
+  "NotFound": {
+    "title": "404 · Página no encontrada",
+    "description": "La página que buscas no existe o se ha movido.",
+    "back": "Volver a la página de inicio"
+  }
+}
