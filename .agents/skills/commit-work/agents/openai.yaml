@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit Work"
+  short_description: "Create focused, high-quality commits"
+  default_prompt: "Use $commit-work to review, stage, and create focused git commits."

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "commit-work": {
+      "source": "fellipeutaka/leon",
+      "sourceType": "github",
+      "skillPath": "skills/commit-work/SKILL.md",
+      "computedHash": "b450db3a520ca81e66dc9d9e7dcbf272146347eb343bf2087f5e632d4e03c831"
+    }
+  }
+}
