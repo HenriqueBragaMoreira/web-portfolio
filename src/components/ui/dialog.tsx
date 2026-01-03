@@ -1,6 +1,6 @@
 "use client";
 
-// biome-ignore lint/style/noNamespaceImport: <explanation>
+// biome-ignore lint/performance/noNamespaceImport: Radix primitives are consumed as a namespace
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
 import { cn } from "@/lib/cva";

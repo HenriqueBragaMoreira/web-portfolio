@@ -1,7 +1,11 @@
 {
-  "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
-  "organizeImports": {
-    "enabled": true
+  "$schema": "https://biomejs.dev/schemas/2.6.2/schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
   },
   "css": {
     "formatter": {
@@ -9,6 +13,9 @@
     },
     "linter": {
       "enabled": false
+    },
+    "parser": {
+      "tailwindDirectives": true
     }
   },
   "vcs": {
@@ -30,48 +37,93 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "all": true,
       "a11y": {
-        "all": true,
-        "noSvgWithoutTitle": "off"
+        "noSvgWithoutTitle": "off",
+        "noLabelWithoutControl": {
+          "level": "error",
+          "options": {
+            "inputComponents": ["Input", "Textarea"]
+          }
+        }
       },
       "style": {
-        "recommended": true,
+        "preset": "recommended",
         "noDefaultExport": "error",
-        "noImplicitBoolean": "off"
+        "noImplicitBoolean": "off",
+        "useComponentExportOnlyModules": {
+          "level": "warn",
+          "options": {
+            "allowExportNames": [
+              "metadata",
+              "generateMetadata",
+              "generateStaticParams",
+              "viewport",
+              "generateViewport",
+              "dynamicParams",
+              "dynamic",
+              "revalidate",
+              "alt",
+              "size",
+              "contentType"
+            ]
+          }
+        }
       },
       "suspicious": {
-        "all": true,
-        "noReactSpecificProps": "off"
-      },
-      "complexity": {
-        "all": true
+        "noReactSpecificProps": "off",
+        "noConsole": {
+          "level": "error",
+          "options": {
+            "allow": ["error", "warn"]
+          }
+        }
       },
       "correctness": {
-        "all": true,
-        "useImportExtensions": "off"
+        "useImportExtensions": "off",
+        "noReactNativeRawText": "off",
+        "noProcessGlobal": "off",
+        "noNodejsModules": "off",
+        "useJsonImportAttributes": "off"
       },
+      "preset": "all",
       "performance": {
-        "all": true
+        "noJsxPropsBind": "off"
       },
-      "security": {
-        "all": true
+      "complexity": {
+        "noExcessiveLinesPerFunction": "off"
       }
+    },
+    "domains": {
+      "react": "all",
+      "next": "all",
+      "solid": "none",
+      "qwik": "none",
+      "vue": "none"
     }
   },
   "files": {
-    "ignore": ["node_modules"]
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!.claude",
+      "!.impeccable",
+      "!**/*.md"
+    ]
   },
   "overrides": [
     {
-      "include": [
-        "src/app/**/page.tsx",
-        "src/app/**/layout.tsx",
-        "src/app/**/not-found.tsx",
-
-        "*.config.js",
-        "*.config.mjs",
-        "*.config.ts"
+      "includes": [
+        "**/src/app/**/page.tsx",
+        "**/src/app/**/layout.tsx",
+        "**/src/app/**/not-found.tsx",
+        "**/*.config.js",
+        "**/*.config.mjs",
+        "**/*.config.ts",
+        "**/src/app/sitemap.ts",
+        "**/src/app/robots.ts",
+        "**/src/i18n/request.ts",
+        "**/src/proxy.ts",
+        "**/src/app/global-not-found.tsx"
       ],
       "linter": {
         "rules": {
@@ -82,27 +134,49 @@
       }
     },
     {
-      "include": [
-        "src/@types/**/*.d.ts",
-        "src/components/icons/**/*.tsx",
-        "src/app/**/layout.tsx",
-        "src/components/navbar.tsx"
+      "includes": [
+        "**/src/@types/**/*.d.ts",
+        "**/src/components/icons/**/*.tsx",
+        "**/src/app/**/layout.tsx",
+        "**/src/components/navbar.tsx",
+        "**/src/components/footer.tsx"
       ],
       "linter": {
         "rules": {
           "correctness": {
-            "noUndeclaredVariables": "off"
+            "noUndeclaredVariables": "off",
+            "useUniqueElementIds": "off"
           }
         }
       }
     },
     {
-      "include": ["src/components/icons/**/*.ts"],
+      "includes": ["**/src/components/icons/**/*.ts"],
       "linter": {
         "rules": {
           "performance": {
             "noReExportAll": "off",
             "noBarrelFile": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/src/app/**/sections/*.tsx"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "useUniqueElementIds": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/src/data/site.ts"],
+      "linter": {
+        "rules": {
+          "security": {
+            "noSecrets": "off"
           }
         }
       }
