@@ -1,21 +1,25 @@
 "use client";
+
+import { Check, Copy } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { site } from "@/data/site";
 import { useEmailCopy } from "@/utils/copyEmail";
-import { Copy } from "lucide-react";
 
 export function CopyEmailButton() {
-  const email = "shenrique40moreira@gmail.com";
-  const { showCopied, handleCopyEmail } = useEmailCopy(email);
+  const t = useTranslations("CopyEmail");
+  const { showCopied, handleCopyEmail } = useEmailCopy(site.email);
+  const Icon = showCopied ? Check : Copy;
 
   return (
     <button
       type="button"
       onClick={handleCopyEmail}
       disabled={showCopied}
-      className="flex items-center gap-2 text-sm text-secondary font-medium hover:text-primary cursor-pointer disabled:cursor-not-allowed"
+      title={t("copy")}
+      className="flex cursor-pointer items-center gap-2 font-medium text-secondary text-sm hover:text-primary disabled:cursor-default"
     >
-      <Copy size={14} />
-
-      <span>{showCopied ? "Copiado!" : email}</span>
+      <Icon size={14} aria-hidden="true" />
+      <span aria-live="polite">{showCopied ? t("copied") : site.email}</span>
     </button>
   );
 }

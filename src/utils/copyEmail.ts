@@ -1,14 +1,21 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const useEmailCopy = (email: string) => {
   const [showCopied, setShowCopied] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
 
-  function handleCopyEmail() {
-    navigator.clipboard.writeText(email);
+  useEffect(() => () => clearTimeout(timeoutRef.current ?? undefined), []);
+
+  async function handleCopyEmail() {
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch {
+      window.location.href = `mailto:${email}`;
+      return;
+    }
+
     setShowCopied(true);
-    setTimeout(() => {
-      setShowCopied(false);
-    }, 2000);
+    timeoutRef.current = setTimeout(() => setShowCopied(false), 2000);
   }
 
   return {
