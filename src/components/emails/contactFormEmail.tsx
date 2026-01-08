@@ -17,12 +17,14 @@ interface ContactFormEmailProps {
   name: string;
   email: string;
   message: string;
+  locale?: string;
 }
 
 export function ContactFormEmail({
   name = "",
   email = "",
   message = "",
+  locale = "",
 }: ContactFormEmailProps) {
   const currentDate = new Date().toLocaleDateString("pt-BR", {
     year: "numeric",
@@ -108,6 +110,21 @@ export function ContactFormEmail({
                             </Text>
                           </Column>
                         </Row>
+
+                        {locale ? (
+                          <Row>
+                            <Column>
+                              <Text className="text-sm text-secondary font-medium m-0">
+                                Idioma do site:
+                              </Text>
+                            </Column>
+                            <Column>
+                              <Text className="text-lg text-primary font-semibold m-0">
+                                {locale}
+                              </Text>
+                            </Column>
+                          </Row>
+                        ) : null}
                       </Column>
                     </Row>
                   </Section>
@@ -123,8 +140,7 @@ export function ContactFormEmail({
 
                   <Section className="text-center bg-[#1B1925] p-6 mt-8 rounded-lg border border-solid border-accent">
                     <Text className="text-base text-primary font-medium">
-                      Lembre-se de responder o mais breve possível para manter o
-                      engajamento!
+                      Responda direto deste e-mail: a resposta vai para {email}.
                     </Text>
                   </Section>
                 </Section>
@@ -137,11 +153,7 @@ export function ContactFormEmail({
                   <Hr className="my-4 border border-solid border-foreground opacity-50" />
 
                   <Text className="text-xs text-primary/60 text-center mb-0">
-                    © {new Date().getFullYear()} Seu Portfólio • Todos os
-                    direitos reservados
-                  </Text>
-                  <Text className="text-xs text-primary/60 text-center mb-0 mt-2">
-                    Desenvolvido com ❤️ para o seu sucesso profissional
+                    © {new Date().getFullYear()} Henrique Braga · Portfólio
                   </Text>
                 </Section>
               </div>
