@@ -1,11 +1,10 @@
 "use client";
+
 import dynamic from "next/dynamic";
 
 const ClientTimeDisplay = dynamic(
   () => import("./clientTimeDisplay").then((mod) => mod.ClientTimeDisplay),
-  {
-    ssr: false,
-  }
+  { ssr: false }
 );
 
 export function LocalTime() {
