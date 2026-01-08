@@ -1,3 +1,7 @@
-export const leftNavItems = ["Intro", "About", "Work", "Experience"];
+export const leftNavItems = ["intro", "about", "work", "experience"] as const;
 
-export const rightNavItems = ["Education", "Stacks", "Blog", "Contact"];
+export const rightNavItems = ["education", "stacks", "contact"] as const;
+
+export type NavItem =
+  | (typeof leftNavItems)[number]
+  | (typeof rightNavItems)[number];
