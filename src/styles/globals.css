@@ -30,6 +30,25 @@
   }
 }
 
+/* Sections settle in as they scroll into view. Content is visible by default:
+   browsers without scroll-driven animations, or with reduced motion, skip it. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    translate: 0 1rem;
+  }
+}
+
 /* The expanded navbar covers the locale switcher on narrow screens. */
 @media (width < 64rem) {
   body:has([data-navbar][data-visible="true"]) [data-locale-switcher] {
