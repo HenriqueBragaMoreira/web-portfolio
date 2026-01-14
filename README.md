@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Henrique Braga · Portfolio
 
-## Getting Started
+Personal portfolio of Henrique Braga, Full Stack Developer. Trilingual (pt-BR, en-US, es-ES), statically rendered and deployed on Vercel.
 
-First, run the development server:
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, `proxy.ts`, `next/root-params`) + React 19 + TypeScript 7
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [next-intl](https://next-intl.dev) for i18n
+- [Resend](https://resend.com) + React Email for the contact form
+- [Biome](https://biomejs.dev) for lint and format
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+cp .env.example .env.local   # fill in RESEND_API_KEY
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Script | What it does |
+| --- | --- |
+| `pnpm dev` | Dev server on http://localhost:3000 |
+| `pnpm build` / `pnpm start` | Production build and server |
+| `pnpm check` / `pnpm format` | Biome lint + format (check / fix) |
+| `pnpm typecheck` | TypeScript check |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Name | Required | Description |
+| --- | --- | --- |
+| `RESEND_API_KEY` | yes (contact form) | Server-only Resend key |
+| `NEXT_PUBLIC_SITE_URL` | no | Canonical site URL. Falls back to `VERCEL_PROJECT_PRODUCTION_URL` on Vercel |
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/app/[locale]/    Root layout and every page, one static build per locale
+src/data/            Structured content: projects, experiences, education, stacks, site info
+src/i18n/            Routing (pt-BR without prefix, /en, /es), navigation helpers, request config
+src/i18n/messages/   UI copy per locale (pt-BR is the source of truth for keys)
+src/actions/         Server actions (contact form)
+public/projects/     Project screenshots (1440×900)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Adding a project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Add screenshots to `public/projects/<slug>.png` (1440×900).
+2. Add the entry to `src/data/projects.ts` (extend the `slug` union).
+3. Add `Project.items.<slug>` to the three files in `src/i18n/messages/`.
