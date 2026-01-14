@@ -22,11 +22,30 @@
 }
 
 @layer base {
-  body {
-    @apply bg-background text-primary;
+  html {
+    color-scheme: dark;
   }
+
+  body {
+    @apply bg-background text-primary caret-primary;
+  }
+
   section {
     @apply scroll-mt-20;
+  }
+
+  ::selection {
+    @apply bg-primary text-background;
+  }
+
+  :focus-visible {
+    @apply rounded-sm outline-2 outline-primary/70 outline-offset-2;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible,
+  [role="dialog"]:focus-visible {
+    @apply outline-none;
   }
 }
 
@@ -46,6 +65,19 @@
   from {
     opacity: 0;
     translate: 0 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
 
