@@ -228,6 +228,10 @@
         "subtitle": "Framework web de alto rendimiento.",
         "description": "Framework rápido y con poco overhead para crear APIs en Node.js. Admite plugins y validación con JSON Schema y está optimizado para el rendimiento."
       },
+      "springBoot": {
+        "subtitle": "Framework back-end para Java.",
+        "description": "Framework del ecosistema Spring que simplifica la creación de APIs y servicios en Java. Ofrece configuración automática, servidor embebido e integraciones listas para bases de datos, seguridad y pruebas."
+      },
       "drizzle": {
         "subtitle": "ORM para TypeScript.",
         "description": "Drizzle es un ORM moderno y con tipado seguro para TypeScript. Su enfoque cercano a SQL, con tipado estático y autocompletado completo, hace que trabajar con la base de datos sea más seguro, predecible y productivo."

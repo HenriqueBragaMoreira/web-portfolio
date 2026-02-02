@@ -228,6 +228,10 @@
         "subtitle": "High-performance web framework.",
         "description": "A fast, low-overhead framework for building Node.js APIs. It supports plugins and JSON Schema validation and is optimized for performance."
       },
+      "springBoot": {
+        "subtitle": "Back-end framework for Java.",
+        "description": "A framework from the Spring ecosystem that simplifies building APIs and services in Java. It offers auto-configuration, an embedded server and ready-made integrations for databases, security and testing."
+      },
       "drizzle": {
         "subtitle": "ORM for TypeScript.",
         "description": "Drizzle is a modern, type-safe ORM for TypeScript. Its SQL-like approach with static typing and full autocompletion makes database work safer, more predictable and more productive."

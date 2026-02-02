@@ -6,6 +6,7 @@ import {
   NestIcon,
   NodeIcon,
   PrismaIcon,
+  SpringBootIcon,
 } from "@/components/icons/stacks/back";
 import {
   MySqlIcon,
@@ -181,6 +182,12 @@ export const stackItems = {
     title: "Fastify",
     icon: FastifyIcon,
     href: "https://fastify.dev/",
+  },
+  springBoot: {
+    id: "springBoot",
+    title: "Spring Boot",
+    icon: SpringBootIcon,
+    href: "https://spring.io/projects/spring-boot",
   },
   drizzle: {
     id: "drizzle",
@@ -363,6 +370,7 @@ export const stackGroups = [
       "hono",
       "express",
       "fastify",
+      "springBoot",
       "drizzle",
       "prisma",
       "zod",

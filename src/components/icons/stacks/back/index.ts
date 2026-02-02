@@ -5,3 +5,4 @@ export * from "./hono";
 export * from "./nest";
 export * from "./node";
 export * from "./prisma";
+export * from "./springBoot";
