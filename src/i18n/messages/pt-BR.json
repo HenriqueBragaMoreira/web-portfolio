@@ -176,6 +176,10 @@
         "subtitle": "Superset tipado de JavaScript.",
         "description": "Linguagem de programação que estende o JavaScript com tipagem estática e recursos avançados de orientação a objetos. Facilita o desenvolvimento de aplicações escaláveis e melhora a produtividade com ferramentas como autocompletar e verificação de tipos."
       },
+      "java": {
+        "subtitle": "Linguagem orientada a objetos.",
+        "description": "Linguagem de programação compilada para a JVM, com tipagem estática e forte orientação a objetos. Muito usada em sistemas corporativos e APIs back-end pela portabilidade, estabilidade e ecossistema maduro."
+      },
       "vite": {
         "subtitle": "Bundler moderno para front-end.",
         "description": "Ferramenta de build e dev server ultrarrápido, com suporte nativo a ESModules. Ideal para projetos com frameworks como React e Vue, oferece recarregamento instantâneo e integração com TypeScript."

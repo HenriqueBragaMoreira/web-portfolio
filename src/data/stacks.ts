@@ -27,6 +27,7 @@ import {
   ZodIcon,
 } from "@/components/icons/stacks/front";
 import {
+  JavaIcon,
   JavascriptIcon,
   TypescriptIcon,
 } from "@/components/icons/stacks/languages/";
@@ -112,6 +113,12 @@ export const stackItems = {
     title: "TypeScript",
     icon: TypescriptIcon,
     href: "https://www.typescriptlang.org/",
+  },
+  java: {
+    id: "java",
+    title: "Java",
+    icon: JavaIcon,
+    href: "https://dev.java/",
   },
   vite: {
     id: "vite",
@@ -330,7 +337,7 @@ export const featuredStacks: readonly StackId[] = [
 ];
 
 export const stackGroups = [
-  { id: "languages", stacks: ["javascript", "typescript"] },
+  { id: "languages", stacks: ["javascript", "typescript", "java"] },
   {
     id: "frontend",
     stacks: [

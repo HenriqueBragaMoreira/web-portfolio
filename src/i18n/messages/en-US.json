@@ -176,6 +176,10 @@
         "subtitle": "Typed superset of JavaScript.",
         "description": "A language that extends JavaScript with static typing and advanced object-oriented features. It makes scalable applications easier to build and boosts productivity with autocompletion and type checking."
       },
+      "java": {
+        "subtitle": "Object-oriented programming language.",
+        "description": "A statically typed, object-oriented language compiled for the JVM. Widely used in enterprise systems and back-end APIs for its portability, stability and mature ecosystem."
+      },
       "vite": {
         "subtitle": "Modern front-end bundler.",
         "description": "An ultra-fast build tool and dev server with native ES module support. Great for React and Vue projects, with instant reloads and TypeScript integration."
