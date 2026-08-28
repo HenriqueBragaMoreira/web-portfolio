@@ -27,7 +27,7 @@ export default function NotFound() {
           </span>
 
           <span className="absolute bottom-0 left-0 h-px w-full bg-foreground" />
-          <span className="absolute bottom-0 left-0 h-px w-0 bg-primary transition-all duration-500 ease-in-out group-hover:w-full" />
+          <span className="absolute bottom-0 left-0 h-px w-full origin-left scale-x-0 bg-primary transition-transform duration-500 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100" />
         </Link>
       </div>
 
