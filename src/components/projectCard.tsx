@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { RevealItem } from "@/components/motion/reveal";
 import type { Project } from "@/data/projects";
 import { Link } from "@/i18n/navigation";
 
@@ -18,14 +19,16 @@ export function ProjectCard({ project, sizes }: ProjectCardProps) {
       className="group flex flex-col rounded-lg border border-foreground transition-colors hover:border-primary/30"
     >
       <div className="overflow-hidden rounded-t-lg">
-        <Image
-          src={project.images[0]}
-          alt={t("screenshotAlt", { name: project.name })}
-          width={1440}
-          height={900}
-          sizes={sizes}
-          className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-        />
+        <RevealItem variant="settle">
+          <Image
+            src={project.images[0]}
+            alt={t("screenshotAlt", { name: project.name })}
+            width={1440}
+            height={900}
+            sizes={sizes}
+            className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          />
+        </RevealItem>
       </div>
 
       <div className="flex items-start justify-between border-foreground border-t p-4">
