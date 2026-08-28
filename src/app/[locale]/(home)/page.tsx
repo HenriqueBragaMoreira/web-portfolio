@@ -14,23 +14,23 @@ export default function Home() {
         <AboutSection />
       </div>
 
-      <div className="reveal flex w-full justify-center">
+      <div className="flex w-full justify-center">
         <WorkSection />
       </div>
 
-      <div className="reveal flex w-full justify-center">
+      <div className="flex w-full justify-center">
         <ExperienceSection />
       </div>
 
-      <div className="reveal flex w-full justify-center">
+      <div className="flex w-full justify-center">
         <EducationSection />
       </div>
 
-      <div className="reveal flex w-full justify-center">
+      <div className="flex w-full justify-center">
         <StacksSection />
       </div>
 
-      <div className="reveal flex w-full justify-center">
+      <div className="flex w-full justify-center">
         <ContactSection />
       </div>
     </>

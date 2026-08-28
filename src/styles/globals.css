@@ -49,22 +49,14 @@
   }
 }
 
-/* Sections settle in as they scroll into view. Content is visible by default:
-   browsers without scroll-driven animations, or with reduced motion, skip it. */
-@media (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: view()) {
-    .reveal {
-      animation: reveal linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 35%;
-    }
-  }
-}
-
-@keyframes reveal {
-  from {
-    opacity: 0;
-    translate: 0 1rem;
+/* Entrances (src/components/motion/reveal.tsx) start hidden in the server
+   HTML. Without scripts, or on paper, show their final state. */
+@media print, (scripting: none) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
   }
 }
 

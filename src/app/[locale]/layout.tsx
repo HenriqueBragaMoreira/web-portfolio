@@ -6,6 +6,7 @@ import { getTranslations } from "next-intl/server";
 import { Toaster } from "sonner";
 import { Footer } from "@/components/footer";
 import { LocaleSwitcher } from "@/components/localeSwitcher";
+import { MotionProvider } from "@/components/motion/motionProvider";
 import { Navbar } from "@/components/navbar";
 import { site } from "@/data/site";
 import { routing } from "@/i18n/routing";
@@ -119,14 +120,16 @@ export default async function LocaleLayout({
         />
 
         <NextIntlClientProvider>
-          <Navbar />
-          <LocaleSwitcher />
+          <MotionProvider>
+            <Navbar />
+            <LocaleSwitcher />
 
-          <main className="flex flex-col items-center gap-[120px] px-4 pb-24 md:px-0">
-            {children}
-          </main>
+            <main className="flex flex-col items-center gap-[120px] px-4 pb-24 md:px-0">
+              {children}
+            </main>
 
-          <Footer />
+            <Footer />
+          </MotionProvider>
 
           <Toaster
             toastOptions={{
