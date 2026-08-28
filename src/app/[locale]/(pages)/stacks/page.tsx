@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { DialogStackInfo } from "@/app/[locale]/(home)/sections/components/dialogStackInfo";
+import { Reveal, RevealItem, RevealLine } from "@/components/motion/reveal";
 import { stackGroups, stackItems } from "@/data/stacks";
 import type { Locale } from "@/i18n/routing";
 import { alternatesFor } from "@/lib/seo";
@@ -28,21 +29,34 @@ export default function StacksPage() {
 
   return (
     <div className="flex w-full max-w-[700px] flex-col justify-center gap-8">
-      <h1 className="font-medium text-2xl">{t("title")}</h1>
+      <Reveal trigger="mount">
+        <RevealItem as="h1" className="font-medium text-2xl">
+          {t("title")}
+        </RevealItem>
+      </Reveal>
 
       {stackGroups.map((group) => (
-        <section key={group.id} className="flex flex-col gap-6">
-          <div>
-            <h2 className="md:text-lg">{t(`groups.${group.id}`)}</h2>
-            <div className="h-px bg-foreground" />
+        <Reveal
+          key={group.id}
+          as="section"
+          stagger={0.03}
+          className="flex flex-col gap-6"
+        >
+          <div className="relative pb-px">
+            <RevealItem as="h2" className="md:text-lg">
+              {t(`groups.${group.id}`)}
+            </RevealItem>
+            <RevealLine axis="x" className="top-auto bottom-0" />
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2">
             {group.stacks.map((id) => (
-              <DialogStackInfo key={id} stack={stackItems[id]} />
+              <RevealItem key={id} className="grid">
+                <DialogStackInfo stack={stackItems[id]} />
+              </RevealItem>
             ))}
           </div>
-        </section>
+        </Reveal>
       ))}
     </div>
   );
