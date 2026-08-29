@@ -6,6 +6,7 @@ import { useMessages, useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { use } from "react";
 import { Github } from "@/components/icons/github";
+import { Reveal, RevealItem, RevealLine } from "@/components/motion/reveal";
 import { getProject, type Project, projects } from "@/data/projects";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -100,98 +101,149 @@ function ProjectDetails({ project }: { project: Project }) {
   const [cover, ...gallery] = project.images;
   const screenshotAlt = t("screenshotAlt", { name: project.name });
 
+  // The header and cover play as one sequence on load; everything below the
+  // fold enters as it is reached.
   return (
-    <article className="flex w-full max-w-[700px] flex-col gap-10 pt-24">
-      <Link
-        href="/works"
-        className="flex max-w-fit items-center gap-0.5 text-secondary hover:text-primary"
-      >
-        <ArrowLeft size={16} aria-hidden="true" />
-        {t("back")}
-      </Link>
+    <Reveal
+      as="article"
+      trigger="mount"
+      stagger={0.07}
+      className="flex w-full max-w-[700px] flex-col gap-10 pt-24"
+    >
+      <RevealItem variant="fade" className="max-w-fit">
+        <Link
+          href="/works"
+          className="group flex items-center gap-0.5 text-secondary transition-colors hover:text-primary"
+        >
+          <ArrowLeft
+            size={16}
+            aria-hidden="true"
+            className="transition-transform duration-200 ease-out group-hover:-translate-x-0.5"
+          />
+          {t("back")}
+        </Link>
+      </RevealItem>
 
       <header className="flex flex-col gap-6">
         <div className="flex flex-col gap-2">
-          <h1 className="text-balance font-medium text-[26px] leading-tight md:text-[32px]">
+          <RevealItem
+            as="h1"
+            className="text-balance font-medium text-[26px] leading-tight md:text-[32px]"
+          >
             {project.name}
-          </h1>
-          <p className="text-secondary md:text-xl">
+          </RevealItem>
+          <RevealItem as="p" className="text-secondary md:text-xl">
             {t(`items.${project.slug}.subtitle`)}
-          </p>
+          </RevealItem>
         </div>
 
-        <dl className="flex flex-wrap gap-x-8 gap-y-2 border-foreground border-t pt-3 text-sm">
-          <div className="flex gap-2">
-            <dt className="text-secondary">{t("year")}</dt>
-            <dd className="tabular-nums">{project.year}</dd>
-          </div>
-          <div className="flex gap-2">
-            <dt className="text-secondary">{t("role")}</dt>
-            <dd>{t(`items.${project.slug}.role`)}</dd>
-          </div>
-        </dl>
+        <div className="relative pt-3">
+          <RevealLine axis="x" />
+          <dl className="flex flex-wrap gap-x-8 gap-y-2 text-sm">
+            <RevealItem className="flex gap-2">
+              <dt className="text-secondary">{t("year")}</dt>
+              <dd className="tabular-nums">{project.year}</dd>
+            </RevealItem>
+            <RevealItem className="flex gap-2">
+              <dt className="text-secondary">{t("role")}</dt>
+              <dd>{t(`items.${project.slug}.role`)}</dd>
+            </RevealItem>
+          </dl>
+        </div>
 
-        <ProjectLinks project={project} />
+        <RevealItem>
+          <ProjectLinks project={project} />
+        </RevealItem>
       </header>
 
-      <Image
-        src={cover}
-        alt={screenshotAlt}
-        width={1440}
-        height={900}
-        priority
-        sizes="(max-width: 768px) 100vw, 700px"
-        className="w-full rounded-lg border border-foreground"
-      />
+      <RevealItem
+        variant="unmask"
+        className="overflow-hidden rounded-lg border border-foreground"
+      >
+        <RevealItem variant="settle">
+          <Image
+            src={cover}
+            alt={screenshotAlt}
+            width={1440}
+            height={900}
+            priority
+            sizes="(max-width: 768px) 100vw, 700px"
+            className="w-full"
+          />
+        </RevealItem>
+      </RevealItem>
 
-      <div className="flex max-w-[65ch] flex-col gap-4">
-        <p className="text-pretty text-base leading-relaxed md:text-lg">
+      <Reveal stagger={0.08} className="flex max-w-[65ch] flex-col gap-4">
+        <RevealItem
+          as="p"
+          className="text-pretty text-base leading-relaxed md:text-lg"
+        >
           {t(`items.${project.slug}.summary`)}
-        </p>
-        <p className="text-pretty text-secondary text-sm leading-relaxed md:text-base">
+        </RevealItem>
+        <RevealItem
+          as="p"
+          className="text-pretty text-secondary text-sm leading-relaxed md:text-base"
+        >
           {t(`items.${project.slug}.description`)}
-        </p>
-      </div>
+        </RevealItem>
+      </Reveal>
 
-      <section className="flex flex-col gap-4">
-        <h2 className="font-medium md:text-lg">{t("features")}</h2>
-        <ul className="flex flex-col gap-3 border-foreground border-l pl-4">
-          {Object.entries(features).map(([key, feature]) => (
-            <li
-              key={key}
-              className="text-pretty text-secondary text-sm md:text-base"
-            >
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </section>
+      <Reveal as="section" stagger={0.06} className="flex flex-col gap-4">
+        <RevealItem as="h2" className="font-medium md:text-lg">
+          {t("features")}
+        </RevealItem>
+        <div className="relative pl-4">
+          <RevealLine axis="y" />
+          <ul className="flex flex-col gap-3">
+            {Object.entries(features).map(([key, feature]) => (
+              <RevealItem
+                key={key}
+                as="li"
+                className="text-pretty text-secondary text-sm md:text-base"
+              >
+                {feature}
+              </RevealItem>
+            ))}
+          </ul>
+        </div>
+      </Reveal>
 
-      <section className="flex flex-col gap-4">
-        <h2 className="font-medium md:text-lg">{t("stack")}</h2>
+      <Reveal as="section" stagger={0.03} className="flex flex-col gap-4">
+        <RevealItem as="h2" className="font-medium md:text-lg">
+          {t("stack")}
+        </RevealItem>
         <ul className="flex flex-wrap gap-2">
           {project.stack.map((item) => (
-            <li
+            <RevealItem
               key={item}
+              as="li"
+              variant="pop"
               className="rounded-md border border-foreground px-2.5 py-1 text-secondary text-sm"
             >
               {item}
-            </li>
+            </RevealItem>
           ))}
         </ul>
-      </section>
+      </Reveal>
 
       {gallery.map((image) => (
-        <Image
+        <Reveal
           key={image}
-          src={image}
-          alt={screenshotAlt}
-          width={1440}
-          height={900}
-          sizes="(max-width: 768px) 100vw, 700px"
-          className="w-full rounded-lg border border-foreground"
-        />
+          variant="unmask"
+          className="overflow-hidden rounded-lg border border-foreground"
+        >
+          <RevealItem variant="settle">
+            <Image
+              src={image}
+              alt={screenshotAlt}
+              width={1440}
+              height={900}
+              sizes="(max-width: 768px) 100vw, 700px"
+              className="w-full"
+            />
+          </RevealItem>
+        </Reveal>
       ))}
-    </article>
+    </Reveal>
   );
 }
