@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, m } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
 import { useActionState, useEffect } from "react";
 import { toast } from "sonner";
@@ -7,6 +8,7 @@ import {
   type ContactFormState,
   sendContactEmail,
 } from "@/actions/sendContactEmail";
+import { EASE_OUT } from "@/components/motion/easing";
 import { Input } from "./input";
 import { Textarea } from "./textarea";
 
@@ -88,14 +90,30 @@ export function ContactForm() {
         />
       </label>
 
-      <button
+      <m.button
         type="submit"
         disabled={isPending}
         aria-busy={isPending}
-        className="cursor-pointer rounded-md bg-primary px-4 py-2 font-medium text-background transition-colors duration-300 hover:bg-primary/80 disabled:cursor-progress disabled:bg-primary/60"
+        whileTap={isPending ? undefined : { scale: 0.98 }}
+        transition={{ duration: 0.12 }}
+        className="cursor-pointer overflow-hidden rounded-md bg-primary px-4 py-2 font-medium text-background transition-colors duration-300 hover:bg-primary/80 disabled:cursor-progress disabled:bg-primary/60"
       >
-        {isPending ? t("sending") : t("submit")}
-      </button>
+        <AnimatePresence mode="wait" initial={false}>
+          <m.span
+            key={isPending ? "sending" : "submit"}
+            className="block"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.22, ease: EASE_OUT },
+            }}
+            exit={{ opacity: 0, y: -10, transition: { duration: 0.12 } }}
+          >
+            {isPending ? t("sending") : t("submit")}
+          </m.span>
+        </AnimatePresence>
+      </m.button>
     </form>
   );
 }
